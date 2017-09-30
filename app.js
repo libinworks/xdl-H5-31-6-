@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 
 // 引入路由模块
 var index = require('./routes/index');
-var users = require('./routes/users');
-var news = require('./routes/news');
+// var users = require('./routes/users');
+// var news = require('./routes/news');
 
 // 创建项目实例
 var app = express();
@@ -33,8 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 分配路由
 app.use('/', index);
-app.use('/users', users);
-app.use('/news', news);
+// app.use('/users', users);
+// app.use('/news', news);
 
 // catch 404 and forward to error handler
 // 捕获404错误
