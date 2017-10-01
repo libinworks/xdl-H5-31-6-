@@ -1,17 +1,17 @@
-// index.js 和 routes/index.js是对应的
-
-// 定义对象
+// 对应index路由的控制器
 var index = {};
 
-// 定义首页方法
-index.index = function(req, res) {
-	/*
-		req 请求
-		res 响应
-	*/ 
+// 加载stu模型
+var stuModel = require('../models/stuModel');
 
-	// 响应模板
-	res.render('index')
+// 定义方法
+index.index = function(req, res) {
+
+
+}
+// 加载用户注册页面
+index.reg = function(req, res) {
+	
 }
 
 // 向外导出
