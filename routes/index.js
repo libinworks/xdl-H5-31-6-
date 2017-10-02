@@ -5,6 +5,7 @@ var router = express.Router();
 var index = require('../controllers/index')
 
 /* GET home page. */
+//分配路由
 router.get('/', index.index);
 
 
