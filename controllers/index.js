@@ -6,7 +6,8 @@ var stuModel = require('../models/stuModel');
 
 // 定义方法
 index.index = function(req, res) {
-
+	//响应index视图模板
+	res.render('index')
 
 }
 // 加载用户注册页面
