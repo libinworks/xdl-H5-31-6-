@@ -1,5 +1,85 @@
 <!-- 首页 -->
 <!--头部-->
 <% include layouts/header %>
-	<h1>首页</h1>
-<% include layouts/footer%>
+	<!--身体-->
+	<div class="bodys">
+		<div class="body">
+			<!--前面位置部分开始-->
+			<p class="position">您当前的位置:<span>个人空间</span></p>
+			<!--前面位置部分结束-->
+			<!--详细资料区域开始-->
+			<div class="information">
+				<!--头像开始-->
+				<div class="HeadPortrait">
+					<a href="#">
+						<img src="/imgs/1.png">
+					</a>
+				</div>
+				<!--头像结束-->
+				<!--介绍开始-->
+				<div class="PersonalCenter">
+					<p>一杯敬苍天的个人中心</p>
+					<div class="PersonalCenter-div">
+						<span>活跃度：9999</span>
+						<span>积分：12006</span>
+						<span>好友：552</span>
+						<span>年龄：52</span>
+						<span>来自：<span>山西</span>,<span>太原</span></span>
+					</div>
+					<!--勋章开始-->
+					<div class="PersonalCenter-div-xunzhang">
+						<p>勋章：</p>
+						<p>礼物：</p>
+					</div>
+					<!--勋章结束-->
+				</div>
+				<!--介绍结束-->
+				<!--编辑资料开始-->
+				<div class="modify">
+					<span><a href="#">修改资料</a></span>
+				</div>
+				<!--编辑资料结束-->
+			</div>
+			<!--详细资料区域结束-->
+			<!--内容区域开始-->
+			<div class="body-container">
+				<!--内容左边区域开始-->
+				<div class="content-left">
+					<ul>
+						<li><a href="#">个人动态</a></li>
+						<li><a href="#">与我相关</a></li>
+						<li><a href="#">特别关心</a></li>
+						<li><a href="#">我的好友</a></li>
+						<li><a href="#">我的贴吧</a></li>
+						<li><a href="#">我的积分</a></li>
+						<li><a href="#">我的勋章</a></li>
+						<li><a href="#">积分商城</a></li>
+					</ul>
+				</div>
+				<!--内容左边区域结束-->
+
+				<!--内容中间区域开始-->
+				<div class="content-center">
+					<!--导航栏区域开始-->
+					<div class="content-center-nav">
+						<ul>
+							<li><a href="#">主页</a></li>
+							<li><a href="#">相册</a></li>
+							<li><a href="#">分享</a></li>
+							<li><a href="#">收藏</a></li>
+							<li><a href="#">作品集</a></li>
+							<li><a href="#">个人档案</a></li>
+							<li class="last-li"><a href="#">更多</a></li>
+						</ul>
+					</div>
+					<!--导航栏区域结束-->
+					<!--资料卡开始-->
+					<div></div>
+					<!--资料卡结束-->
+				</div>
+				<!--内容中间区域结束-->
+			</div>
+			<!--内容区域结束-->
+		</div>
+	</div>
+<% include layouts/footer %>
