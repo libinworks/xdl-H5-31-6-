@@ -142,6 +142,7 @@ p{
 	float: left;
 	margin-left: 22px;
 	background: #fff;
+	position: relative;
 }
 /*导航栏区域开始*/
 .content-center-nav{
@@ -196,8 +197,13 @@ p{
 /*资料区域结束*/
 /*选项卡开始*/
 .content-center-xia{
-	width: 100%;
+	width: 616px;
 	height: auto;
+	display: none;
+	position: absolute;
+}
+.display{
+	display: block;
 }
 /*选项卡结束*/
 /*资料完整度开始*/
@@ -545,3 +551,11 @@ color: #3E3E3E;
 /*左右箭头结束*/
 /*内容区域右边结束*/
 /*内容区域结束*/
+
+/*修改密码开始*/
+.idv{
+	width: 100%;
+	height: 200px;
+	background: red;
+}
+/*修改密码结束*/

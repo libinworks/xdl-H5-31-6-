@@ -5,7 +5,11 @@ $(function(){
 	$(lis).click(function(){
 		$('.cyans').removeClass('cyans');
 		$(this).addClass('cyans');
-	});
+		//获取当前的索引值
+		var index = $(this).index();
+		$('.display').removeClass('display');
+		$('.content-center-xia').eq(index).addClass('display');
+});
 
 	//定义三级联动的数组
 	var oneArr = [
@@ -61,4 +65,6 @@ $(function(){
 		};
 	};
 
+	//基础资料选项卡
+	
 })
