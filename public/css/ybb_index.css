@@ -6,6 +6,12 @@
 	text-decoration: none;
 	font-family: PingFangSC-Regular;
 }
+a{
+	text-decoration: none;
+}
+p{
+	margin:0;
+}
 .bodys{
 	width: 100%;
 	height: auto;
@@ -13,7 +19,6 @@
 .body{
 	width: 1100px;
 	height: 1170px;
-	background: #ccc;
 	margin:0 auto;
 }
 /*当前的位置开始*/
@@ -29,7 +34,7 @@
 .information{
 	width: 1100px;
 	height:136px;
-	clear:left;
+	clear:both;
 	background: #fff;
 }
 /*头像区域开始*/
@@ -64,6 +69,7 @@
 	margin-right: 20px;
 }
 .PersonalCenter-div-xunzhang{
+	height: 30px;
 	font-size: 22px;
 	color:#666;
 	margin-top: 10px;
@@ -71,6 +77,7 @@
 .PersonalCenter-div-xunzhang>p{
 	display: inline-block;
 	width: 36%;
+	margin:0;
 }
 /*详细介绍结束*/
 /*修改资料开始*/
@@ -102,7 +109,6 @@
 	height: 929px;
 	margin-top: 50px;
 	clear:left;
-	background: red;
 }
 /*内容左边区域开始*/
 .content-left{
@@ -113,6 +119,7 @@
 }
 .content-left ul{
 	padding:0;
+	margin:0;
 	list-style: none;
 }
 .content-left li{
@@ -121,7 +128,7 @@
 	line-height: 40px;
 	font-size: 24px;
 	text-align: center;
-	margin:9px 0;
+	margin:8px 0;
 
 }
 .content-left li a{
@@ -134,7 +141,7 @@
 	height: 929px;
 	float: left;
 	margin-left: 22px;
-	background: blue;
+	background: #fff;
 }
 /*导航栏区域开始*/
 .content-center-nav{
@@ -143,6 +150,8 @@
 }
 .content-center-nav ul{
 	list-style: none;
+	height: 33px;
+	margin:0;
 	padding:0;
 }
 .content-center-nav ul li{
@@ -162,7 +171,6 @@
 	width: 100%;
 	height: 34px;
 	margin-top: 20px;
-	background: cyan;
 }
 .data ul{
 	padding: 0;
@@ -171,13 +179,369 @@
 .data li{
 	list-style: none;
 	float: left;
-	width: 154px;
-	height: 34px;
+	width: 152px;
+	height: 32px;
 	border: 1px solid #979797;
 	font-size: 20px;
 	text-align: center;
 	line-height: 34px;
 }
+.data li a{
+	display: block;
+	color:#545454;
+}
+.data .cyans{
+	background: #158FE1;
+}
 /*资料区域结束*/
+/*选项卡开始*/
+.content-center-xia{
+	width: 100%;
+	height: auto;
+}
+/*选项卡结束*/
+/*资料完整度开始*/
+.DataIntegrity{
+	width: 100%;
+	height: 71px;
+	margin-top: 30px;
+}
+.DataIntegrity p{
+	font-size: 24px;
+}
+.DataIntegrity-div{
+	width: 100%;
+	height: 23px;
+	margin-top: 12px;
+	background: #2C323B;
+	border-radius: 100px;
+}
+.DataIntegrity-divs{
+	width: 50%;
+	height: 100%;
+	background: #158FE1;
+	border-radius: 100px;
+	text-align: center;
+	color:#fff;
+	line-height: 23px;
+	font-size: 18px;
+}
+/*资料完整度结束*/
+/*基本资料开始*/
+.BasicdData{
+	width: 100%;
+	height: 28px;
+	margin-top: 30px;
+	clear: right;
+}
+.BasicdData span{
+	display: inline-block;
+	font-size: 20px;
+	color:#000;
+}
+.modify{
+	float: right;
+	text-align: right;
+	font-size: 18px;
+}
+.modify a{
+	color:#000;
+}
+.xian{
+	width: 100%;
+	height: 1px;
+	background: #D8D8D8;
+	margin-top: 5px;
+}
+/*基本资料结束*/
+/*用户名开始*/
+.username{
+	width: 100%;
+	height: 28px;
+	margin-top: 19px;
+	clear: left;
+}
+.username>span{
+	display: inline-block;
+	width: 88px;
+	height: 28px;
+	margin-left: 10px;
+	font-size: 18px;
+	line-height: 28px;
+	float: left;
+}
+.username p{
+	float: left;
+	font-size: 20px;
+	line-height: 28px;
+}
+.nickNames{
+	width: 100%;
+	height: 28px;
+	margin-top: 10px;
+}
+.span{
+	display: inline-block;
+	width: 88px;
+	height: 28px;
+	margin-left: 10px;
+	font-size: 18px;
+	line-height: 28px;
+}
+.neme{
+	width: 203px;
+	height: 29px;
+	text-align: center;
+	font-size: 18px;
+}
+.Gender{
+	width: 100%;
+	height: 28px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.nan{
+	width: 60px;
+	height: 28px;
+	display: inline-block;
+}
+.Location{
+	width: 100%;
+	height: 28px;
+	margin-top: 10px;
+}
+.Three{
+	display: inline-block;
+}
+.Three>select{
+	margin-right: 20px;
+	font-size: 18px;
+	color: #979797;
+	-webkit-appearance:none;
+	padding:0px 20px;
+}
+.shengri{
+	width: 203px;
+	height: 29px;
+	font-size: 18px;
+	text-align: center;
+}
+.qianming{
+	width: 100%;
+	height: 117px;
+	margin-top: 24px;
+	clear: both;
+}
+.qianming-span{
+	width: 91px;
+	height: 25px;
+	font-size: 18px;
+	margin-left: 10px;
+	float: left;
+}
+.textarea{
+	width: 458px;
+	height: 100px;
+	border: 1px solid #979797;
+	padding:9px 26px;
+	float: right;
+}
+.Locations{
+	width: 100%;
+	height: 40px;
+}
+.Locations div{
+	display: inline-block;
+	margin-right: 20px;
+}
+.text input{
+	width: 98px;
+	height: 17px;
+}
+.button-1{
+	width: 100%;
+	height: 24px;
+	margin-top: 50px;
+}
+.button-1 button{
+	border-radius: 10px;
+	outline: none;
+	border:none;
+	padding:3px 15px;
+	border: 1px solid #979797;
+	background: #fff;
+}
+.button-1 button a{
+	color:#000;
+}
+.button-1 .button-1-zilaio{
+	margin-left: 210px;
+	margin-right: 36px;
+	background: #158FE1;
+	border-radius: 10px;
+	outline: none;
+	border:none;
+	padding:3px 15px;
+}
+.button-1 .button-1-zilaio a{
+	color:#fff;
+}
+/*用户名结束*/
 /*内容中间区域结束*/
+
+/*内容区域右边开始*/
+.content-right{
+	width: 248px;
+	height:684px;
+	float: right;
+}
+.xingqi{
+	width: 248px;
+	height: 81px;
+	clear: left;
+}
+.xingqi-left{
+	width: 89px;
+	height: 81px;
+	opacity: 0.5;
+	background: #158FE1;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+}
+.xiangqi{
+	display: block;
+	font-size: 25px;
+	color: #3E3E3E;
+	margin-top: 13px;
+}
+.riqi{
+	display: block;
+	font-size: 16px;
+color: #3E3E3E;
+}
+.qiandao{
+	width: 157px;
+	height: 81px;
+	background: #158FE1;
+	float: left;
+	line-height: 81px;
+}
+.qiandao1{
+	font-size: 36px;
+color: #FFFFFF;
+margin-left: 17px;
+}
+.qiandaotian{
+	font-size: 20px;
+	margin-left: 15px;
+	color:#fff;
+}
+.fangke{
+	width: 246px;
+	height: 583px;
+	background: #F0F0F0;
+	margin-top: 20px;
+}
+.fagnke{
+	width: 100%;
+	height: 30px;
+}
+.fagnke>span{
+	font-size: 22px;
+color: #3E3E3E;
+margin-left: 15px;
+margin-top: 3px;
+}
+/*访客img开始*/
+.fangke-img{
+	height: 400px;
+	width: 215px;
+	margin:0 auto;
+	margin-top: 12px;
+}
+.fangke-img ul{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+.fangke-img ul li{
+	width: 97px;
+	height: 123px;
+	float: left;
+	text-align: center;
+}
+.fangke-li{
+	margin-right: 20px;	
+	font-size: 16px;
+}
+.fangke-img ul li a{
+color: #3E3E3E;
+}
+.fangke-img ul li img{
+	width: 97px;
+	height: 97px;
+}
+/*访客img开始*/
+/*左右箭头开始*/
+.left-jian{
+	width: 215px;
+	height: 15px;
+	margin:0 auto;
+	clear:left;
+}
+.left-jian div{
+	width: 7.5px;
+	height: 15.5px;
+	float: left;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+.left-jian div img{
+	width: 100%;
+	height: 100%;
+}
+.xian2{
+	width: 215px;
+	height: 6px;
+	background: #D8D8D8;
+	margin:0 auto;
+	margin-top: 6px;
+}
+.liulan{
+	width: 215px;
+	height: 65px;
+	margin:0 auto;
+	margin-top: 10px;
+	clear: both;
+}
+.liulan-left{
+	width: 100px;
+	height: 100%;
+	float: left;
+	font-size: 20px;
+color: #3E3E3E;
+}
+.liulan-left span{
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+.liulan-right{
+	float: right;
+	width: 100px;
+		font-size: 20px;
+color: #3E3E3E;
+}
+.liulan-right span{
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+/*左右箭头结束*/
+/*内容区域右边结束*/
 /*内容区域结束*/
