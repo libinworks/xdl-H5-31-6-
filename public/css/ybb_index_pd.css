@@ -71,7 +71,119 @@ ul{
 	height:680px;
 	margin:0 auto;
 	margin-top: 20px;
-	background: yellow;
 }
+.Oldman{
+	width: 100%;
+	height: 58px;
+	clear: left;
+}
+.Oldman-img{
+	width: 58px;
+	height: 58px;
+	float: left;
+}
+.Oldman-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.cangtian{
+	width: 530px;
+	height: 100%;
+	float: left;
+	clear: right;
+}
+.Oldman p{
+	font-size: 24px;
+	color: #3E3E3E;
+	margin-left: 10px;
+}
+.times{
+	margin-left: 10px;
+	font-size: 18px;
+color: #3E3E3E;
+}
+.time{
+	float: right;
+	font-size: 18px;
+color: #3E3E3E;
+}
+/*动态图片开始*/
+.locomotive{
+	width: 590px;
+	height:476px;
+	margin-top: 20px;
+}
+.locomotive p{
+	font-size: 18px;
+color: #3E3E3E;
+}
+.locomotive div{
+	width: 590px;
+	height: 442px;
+	margin-top: 10px;
+}
+.locomotive div img{
+	width: 100%;
+	height: 100%;
+}
+/*动态图片结束*/
+/*浏览次数开始*/
+.BrowseTimes{
+	width: 100%;
+	height: 25px;
+	margin-top: 20px;
+	clear: right;
+}
+.BrowseTimes>span{
+	font-size: 18px;
+	color: #3E3E3E;
+}
+.Givethethumbs-up{
+	height: 100%;
+	width: 200px;
+	float: right;
+	clear: both;
+}
+.Givethethumbs-up ul li{
+	float: left;
+	margin-left: 40px;
+	font-size: 18px;
+}
+.Givethethumbs-up ul li a{
+	color: #3E3E3E;
+}
+/*浏览次数结束*/
+.femge{
+	width: 590px;
+	height: 3px;
+	background: #F0F0F0;
+	margin-top: 20px;
+}
+/*评论开始*/
+.comment{
+	width: 590px;
+	height: 38px;
+	margin-top: 15px;
+	background: blue;
+	position: relative;
+}
+.comment i{
+	font-size: 30px;
+	position: absolute;
+	right: 10px;
+	top:7px;
+}
+.comment input{
+	width: 586px;
+	height: 36px;
+	outline: none;
+	text-indent: 1em;
+}
+/*评论结束*/
 /*头像和动态结束*/
 /*主页内容结束*/
+
+/*相册开始*/
+
+/*相册结束*/
