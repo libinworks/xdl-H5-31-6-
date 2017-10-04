@@ -8,5 +8,8 @@ var index = require('../controllers/index')
 //分配路由
 router.get('/', index.index);
 
+//分配动态路由
+router.get('/pd',index.pd)
+
 
 module.exports = router;

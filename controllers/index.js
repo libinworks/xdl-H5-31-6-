@@ -10,6 +10,11 @@ index.index = function(req, res) {
 	res.render('ybb_index');
 
 }
+//定义首页的个人动态方法
+index.pd = function(req,res){
+	//响应动态的视图模板
+	res.render('ybb_index_pd');
+}
 // 加载用户注册页面
 index.reg = function(req, res) {
 	

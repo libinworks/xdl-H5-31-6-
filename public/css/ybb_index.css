@@ -128,7 +128,8 @@ p{
 	line-height: 40px;
 	font-size: 24px;
 	text-align: center;
-	margin:8px 0;
+	margin: 0;
+	padding:7px 0;
 
 }
 .content-left li a{
@@ -165,6 +166,9 @@ p{
 }
 .content-center-nav ul li a{
 	color: #3E3E3E;
+}
+.personal{
+	background: #158FE1;
 }
 /*导航栏趋于结束*/
 /*资料区域开始*/
@@ -403,7 +407,8 @@ p{
 .content-right{
 	width: 248px;
 	height:684px;
-	float: right;
+	float:right;
+	/*margin-left: 23px;*/
 }
 .xingqi{
 	width: 248px;
