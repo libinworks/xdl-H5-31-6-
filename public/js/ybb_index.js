@@ -65,6 +65,14 @@ $(function(){
 		};
 	};
 
-	//基础资料选项卡
+	//更换照片开始
+	$('.walls ul li img').click(function(){
+		var srcs= $(this).attr('src');
+		$('.HeadPortrait1 a img').attr('src',srcs);
+	});
+	$('.submits div').click(function(){
+		var Srcc = $('.HeadPortrait1 a img').attr('src');
+		$('.HeadPortrait a img').attr('src',Srcc);
+	})
 	
 })
