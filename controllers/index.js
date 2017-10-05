@@ -15,6 +15,11 @@ index.pd = function(req,res){
 	//响应动态的视图模板
 	res.render('ybb_index_pd');
 }
+//定义首页的与我相关的方法
+index.rv = function(req,res){
+	//响应与我相关的视图模板引擎
+	res.render('ybb_index_rv');
+}
 // 加载用户注册页面
 index.reg = function(req, res) {
 	

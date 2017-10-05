@@ -1,0 +1,98 @@
+.zCenter{
+	width: 616px;
+	height: 500px;
+	float: left;
+	margin-left: 24px;
+	position: relative;
+}
+ul{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+/*选项卡开始*/
+.Opttab{
+	width: 100%;
+	height: 34px;
+	clear: left;
+	line-height: 34px;
+}
+.Opttab ul li{
+	float: left;
+	font-size: 24px;
+	margin-right: 30px;
+}
+.Opttab ul li a{
+	color: #3E3E3E;
+}
+.Opttab ul li .xuan{
+	color: #158FE1;
+}
+/*选项卡结束*/
+/*回复我的开始*/
+.ReplyMe{
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	display: none;
+}
+.xainshi{
+	display: block;
+}
+/*没有回复开始*/
+.NoReply{
+	width: 300px;
+	height: 70px;
+	margin:0 auto;
+	margin-top: 70px;
+	font-size: 24px;
+	color: #000000;
+	text-align: center;
+	display: none;
+}
+.NoReplya{
+	width: 300px;
+	height: 30px;
+	margin:0 auto;
+	margin-top: 70px;
+	font-size: 24px;
+	color: #000000;
+	text-align: center;
+}
+.btnq{
+	margin-top:18px;
+	text-align: center;
+	display: none;
+}
+.btnq button{
+	font-size: 16px;
+	background: #158FE1;
+	padding:1px 30px;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+}
+.btnq button a{
+	color:#fff;
+}
+/*没有回复结束*/
+/*有回复了开始*/
+.YesReply{
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	background: red;
+}
+/*提到我的开始*/
+.Mention{
+	width: 100%;
+	height: auto;
+}
+.Mention p{
+	margin-top: 18px;
+	font-size: 22px;
+	color: #3E3E3E;
+}
+/*提到我的结束*/
+/*有回复了结束*/
+/*回复我的结束*/
