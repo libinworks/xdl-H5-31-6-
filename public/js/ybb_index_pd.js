@@ -33,12 +33,47 @@ $(function(){
 			left:kk-kuan,
 			top:sk
 		});
-		$('.zhezc').click(function(e){
-			e.stopPropagation();
-			$(this).hide();
-		});
+		// $('.zhezc').click(function(e){
+		// 	e.stopPropagation();
+		// 	$(this).hide();
+		// });
 		$('.quxiaoxiao').click(function(){
 			$('.zhezc').hide();
 		})
+	})
+
+	//点击创建相册
+	$('.anniuniu').click(function(){
+		if($('.ceshi').text()==''){
+			$('.xiangpianqu p').remove();
+			$('.js-imgs').remove();
+		}
+		$('.xiangpianqu').prepend('<div class="js-imgs"><div class="js-img"><img src="/imgs/1.png"></div><p><span class="ceshi">相册：</span></p><div class="kaishib"><span></span>2017-06-05</div></div>');
+		$('.js-imgs').css({
+			width:'200px',
+			height:'215px',
+			marginTop:'30px',
+			float:'left',
+			marginLeft:'10px'
+		});
+		$('.js-img').css({
+			width:'198px',
+			height:'148px',
+			background:'cyan',
+			border:'1px solid #979797'
+		});
+		$('.js-img img').css({width:'100%',height:'100%'})
+		$('.js-imgs>p').css({
+			marginTop:'10px',
+			fontSize: '18px',
+			color: '#000000',
+			textAlign:'left'
+		});
+		$('.ppp').css({float:'left'})
+		var h = $('.xiagnnew').val();
+		$('.js-imgs>p').append(h);
+		$('.kaishib').css({width:'100%',height:'25px',marginTop:'5px',color:' #545454'});
+
+		$('.kaishib span').text($('.textarea1').val());
 	})
 })
