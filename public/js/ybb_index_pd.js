@@ -76,4 +76,10 @@ $(function(){
 
 		$('.kaishib span').text($('.textarea1').val());
 	})
+
+	//参与活动开始
+	$('.wencanyu button').click(function(){
+		$(this).parent().hide();
+		$('.activitys').show();
+	})
 })
