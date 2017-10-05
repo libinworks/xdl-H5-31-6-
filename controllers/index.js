@@ -20,6 +20,12 @@ index.rv = function(req,res){
 	//响应与我相关的视图模板引擎
 	res.render('ybb_index_rv');
 }
+
+//定义我的好友的方法
+index.mbf = function(req,res){
+	//响应我的好友的视图模板引擎
+	res.render('ybb_index_mbf');
+}
 // 加载用户注册页面
 index.reg = function(req, res) {
 	

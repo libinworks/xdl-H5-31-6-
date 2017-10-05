@@ -14,5 +14,8 @@ router.get('/pd',index.pd);
 //分配相关路由
 router.get('/rv',index.rv);
 
+//分配好友的路由
+router.get('/mbf',index.mbf);
+
 
 module.exports = router;
