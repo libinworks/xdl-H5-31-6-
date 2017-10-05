@@ -11,5 +11,7 @@ $(function(){
 	$('.btnq button').click(function(){
 		$(this).hide();
 		$(this).parent().prev().hide();
+		$('.YesReply').show();
+		$('.PostTie').show();
 	})
 })

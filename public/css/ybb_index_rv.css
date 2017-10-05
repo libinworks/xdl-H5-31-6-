@@ -48,7 +48,6 @@ ul{
 	font-size: 24px;
 	color: #000000;
 	text-align: center;
-	display: none;
 }
 .NoReplya{
 	width: 300px;
@@ -62,7 +61,6 @@ ul{
 .btnq{
 	margin-top:18px;
 	text-align: center;
-	display: none;
 }
 .btnq button{
 	font-size: 16px;
@@ -81,7 +79,7 @@ ul{
 	width: 100%;
 	height: 400px;
 	overflow: hidden;
-	background: red;
+	display: none;
 }
 /*提到我的开始*/
 .Mention{
@@ -93,6 +91,122 @@ ul{
 	font-size: 22px;
 	color: #3E3E3E;
 }
+.quanbuk{
+	width: 100%;
+	height: 2px;
+	background: #F0F0F0;
+	margin-top: 10px;
+}
+.task{
+	width: 100%;
+	height: 140px;
+	margin-top: 20px;
+}
+.character{
+	width: 100%;
+	height: 58px;
+	clear: both;
+}
+.character-img{
+	width: 58px;
+	height: 58px;
+	margin-left: 20px;
+	float: left;
+}
+.character-img img{
+	width: 100%;
+	height: 100%;
+}
+.shangxia{
+	width: 120px;
+	height: 100%;
+	margin-left: 10px;
+	float: left;
+}
+.shangxia p{
+	font-size: 24px;
+color: #3E3E3E;
+}
+.shangxia span{
+font-size: 18px;
+color: #3E3E3E;
+}
+.riqi{
+	width: 140px;
+	height: 100%;
+	line-height: 58px;
+	float: right;
+	font-size: 18px;
+color: #3E3E3E;
+	text-align: right;
+}
+.redian{
+	width: 100%;
+	height: 28px;
+	margin-top: 10px;
+}
+.tianai{
+	margin-left: 170px;
+	font-size: 20px;
+color: #393939;
+}
+.hsj{
+	margin-left: 280px;
+	font-size: 20px;
+}
+.hsj a{
+	color: #393939;
+}
+.aitet{
+	width: 100%;
+	height: 25px;
+	margin-top: 20px;
+}
+.aitet p{
+	font-size: 18px;
+color: #545454;
+margin-left: 20px;
+}
 /*提到我的结束*/
 /*有回复了结束*/
 /*回复我的结束*/
+/*我收藏的开始*/
+.PostTie{
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.biaoti{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+}
+.biaoti span{
+	font-size: 22px;
+color: #3E3E3E;
+}
+.left{
+	margin-left: 350px;
+}
+.zhuangtai{
+	margin-left: 69px;
+}
+.xianz{
+	background: #F0F0F0;
+	width: 100%;
+	height: 2px;
+}
+.jichejiqiao{
+	width: 100%;
+	height: 88px;
+	line-height: 88px;
+	font-size: 20px;
+color: #393939;
+}
+.zuo{
+	margin-left: 230px;
+}
+.zuobia{
+	margin-left: 50px;
+}
+/*我收藏的结束*/
