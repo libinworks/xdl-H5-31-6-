@@ -1,0 +1,469 @@
+#dasss{
+	width: 630px;
+	height: auto;
+	float:left;
+	margin-left: 20px;
+	position:relative;
+}
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+/*选项卡开始*/
+.activity{
+	width: 100%;
+	height: 33px;
+}
+.activity ul li{
+	float: left;
+	margin-right: 30px;
+	line-height: 33px;
+	font-size: 24px;
+}
+.activity ul li a{
+	color: #3E3E3E;
+}
+.activity ul .dsiplay-1{
+	color: #158FE1;
+}
+/*选项卡结束*/
+/*主页内容开始*/
+.zhuye{
+	width: 630px;
+	height: auto;
+	position: absolute;
+	display: none;
+}
+.yingczang{
+	display: block;
+}
+/*活动动态开始*/
+.winter{
+	width: 623px;
+	height: 30px;
+	margin-top: 10px;
+	clear: right;
+}
+.winter span{
+	 font-size: 22px;
+	color: #3E3E3E;
+}
+.winter div{
+	width: 20px;
+	height: 20px;
+	background: #FF5A6E;
+	float: right;
+	border-radius: 50%;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.RiceNoodles{
+	width: 623px;
+	height: 1px;
+	background: #F0F0F0;
+	margin-top: 10px;
+}
+/*活动动态结束*/
+/*头像和动态开始*/
+.imgs-noddles{
+	width: 590px;
+	height:680px;
+	margin:0 auto;
+	margin-top: 20px;
+}
+.Oldman{
+	width: 100%;
+	height: 58px;
+	clear: left;
+}
+.Oldman-img{
+	width: 58px;
+	height: 58px;
+	float: left;
+}
+.Oldman-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.cangtian{
+	width: 530px;
+	height: 100%;
+	float: left;
+	clear: right;
+}
+.Oldman p{
+	font-size: 24px;
+	color: #3E3E3E;
+	margin-left: 10px;
+}
+.times{
+	margin-left: 10px;
+	font-size: 18px;
+color: #3E3E3E;
+}
+.time{
+	float: right;
+	font-size: 18px;
+color: #3E3E3E;
+}
+/*动态图片开始*/
+.locomotive{
+	width: 590px;
+	height:476px;
+	margin-top: 20px;
+}
+.locomotive p{
+	font-size: 18px;
+color: #3E3E3E;
+}
+.locomotive div{
+	width: 590px;
+	height: 442px;
+	margin-top: 10px;
+}
+.locomotive div img{
+	width: 100%;
+	height: 100%;
+}
+/*动态图片结束*/
+/*浏览次数开始*/
+.BrowseTimes{
+	width: 100%;
+	height: 25px;
+	margin-top: 20px;
+	clear: right;
+}
+.BrowseTimes>span{
+	font-size: 18px;
+	color: #3E3E3E;
+}
+.Givethethumbs-up{
+	height: 100%;
+	width: 200px;
+	float: right;
+	clear: both;
+}
+.Givethethumbs-up ul li{
+	float: left;
+	margin-left: 40px;
+	font-size: 18px;
+}
+.Givethethumbs-up ul li a{
+	color: #3E3E3E;
+}
+/*浏览次数结束*/
+.femge{
+	width: 590px;
+	height: 3px;
+	background: #F0F0F0;
+	margin-top: 20px;
+}
+/*评论开始*/
+.comment{
+	width: 590px;
+	height: 38px;
+	margin-top: 15px;
+	background: blue;
+	position: relative;
+}
+.comment i{
+	font-size: 30px;
+	position: absolute;
+	right: 10px;
+	top:7px;
+}
+.comment input{
+	width: 586px;
+	height: 36px;
+	outline: none;
+	text-indent: 1em;
+}
+/*评论结束*/
+/*头像和动态结束*/
+/*主页内容结束*/
+
+/*相册开始*/
+.pageImg{
+	width: 623px;
+	height:auto;
+	margin-top: 16px;
+}
+/*相册的创建时间开始*/
+.newtime{
+	width: 100%;
+	height: 30px;
+	clear: both;
+}
+/*创建时间开始*/
+.newimgs{
+	width: 158px;
+	height: 28px;
+	border: 1px solid #979797;
+	margin-left: 24px;
+	clear: both;
+	line-height: 28px;
+	padding-left: 10px;
+	color:#979797;
+	float: left;
+	position: relative;
+}
+.xiajiantou{
+	width: 28px;
+	height: 28px;
+	background: #158FE1;
+	float: right;
+	text-align: center;
+	line-height: 28px;
+}
+/*创建时间结束*/
+/*相册名称开始*/
+.imgName{
+	width: 160px;
+	height: 28px;
+	border: 1px solid #979797;
+	margin-left: 24px;
+	float: left;
+	text-align: center;
+	line-height: 28px;
+	color:#979797;
+}
+/*相册名称结束*/
+/*创建新相册开始*/
+.newxiagnce{
+	width: 126px;
+	height: 24px;
+	background: #158FE1;
+	float: left;
+	margin-left: 55px;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 4px;
+}
+.newxiagnce a{
+	color:#fff;
+}
+/*创建新相册结束*/
+/*下拉框开始*/
+.xialakuagn{
+	width: 158px;
+	height: auto;
+	padding-left: 10px;
+	background: #2C323B;
+	margin-left: -10px;
+	position: absolute;
+}
+.xialakuagn li{
+	width: 168px;
+	height: 29px;
+	text-align: center;
+}
+.kuangzi{
+	display: none;
+}
+/*下拉框结束*/
+/*相册的创建时间结束*/
+.xiangpianqu p{
+	margin-top: 43px;
+	text-align: center;
+	font-size: 24px;
+color: #000000;
+}
+/*遮罩层开始*/
+.zhezc{
+	width: 100%;
+	height:500px;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 10;
+	display: none;
+}
+/*创建相册开始*/
+.clearInput{
+	width: 650px;
+	height: 480px;
+	background: #fff;
+	position: absolute;
+}
+.canyu{
+	width: 100%;
+	height: 37px;
+	margin-top: 22px;
+	margin-bottom: 35px;
+	overflow: hidden;
+	clear: left;
+}
+.canyu span{
+	font-size: 26px;
+	color: #3E3E3E;
+	margin-left: 10px;
+} 
+.lanse{
+	width: 5px;
+	height: 27px;
+	background: #158FE1;
+	margin-top: 5px;
+	margin-left: 45px;
+	float: left;
+}
+.ceName{
+	width: 545px;
+	height: 37px;
+	margin-top: 20px;
+	margin-left: 60px;
+	line-height: 37px;
+}
+.ceName span{
+	font-size: 24px;
+	color:#3e3e3e;
+}
+.xiagnnew{
+	width: 413px;
+	height: 30px;
+	outline: none;
+	margin-left: 20px;
+}
+.maioshu{
+	width: 545px;
+	height: 152px;
+	margin-top: 22px;
+	margin-left: 60px;
+	clear: left;
+}
+.maioshu span{
+	font-size: 24px;
+	color:#3e3e3e;
+	float: left;
+}
+.textarea1{
+	width: 413px;
+	height: 149px;
+	border: 1px solid #979797;
+	margin-left: 23px;
+	float: left;
+}
+.anniuniu{
+	width: 100%;
+	height: 44px;
+	margin-top: 50px;
+	text-align: center;
+}
+.anniuniu button{
+	padding:5px 20px;
+	font-size: 24px;
+	outline: none;
+	margin-left: 25px;
+	border:none;
+	border-radius: 10px;
+	background: #158FE1;
+	border:1px solid #158FE1;
+}
+.anniuniu button a{
+	color:#fff;
+}
+.anniuniu .quxiaoxiao{
+	background: #fff;
+	border: 1px solid #979797;
+}
+.anniuniu .quxiaoxiao a{
+	color:#979797;
+}
+/*创建相册结束*/
+/*遮罩层结束*/
+/*相册结束*/
+/*我参与的活动开始*/
+.huohuod{
+	width: 100%;
+	height:auto;
+	overflow: hidden;
+}
+.wencanyu{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.wencanyu p{
+	text-align: center;
+	font-size: 24px;
+	color: #000000;
+	margin-top:70px;
+}
+.wencanyu button{
+	background: #158FE1;
+	padding:2px 30px;
+	outline: none;
+	border:none;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+.wencanyu button a{
+	color:#fff;
+}
+/*参加活动开始*/
+.activitys{
+	width: 100%;
+	height: auto;
+	display: none;
+	overflow: hidden;
+}
+/*正在进行的活动开始*/
+.aciivtys1{
+	width: 100%;
+	height: auto;
+}
+.aciivtys1 p{
+	font-size: 22px;
+	color: #3E3E3E;
+	margin-top: 18px;
+}
+.Conduct{
+	width: 100%;
+	height: 2px;
+	background: #F0F0F0;
+	margin-top: 10px;
+}
+.Riding{
+	width: 636px;
+	height: 124px;
+	margin-top: 15px;
+	clear: both;
+}
+.Riding-left{
+	width: 143px;
+	height: 124px;
+	float: left;
+}
+.Riding-left img{
+	width: 100%;
+	height: 100%;
+}
+/*右边的文字内容开始*/
+.Riding-right{
+	width: 472px;
+	height: 124px;
+	float: right;
+}
+.Riding-right p{
+	font-size: 18px;
+	color: #090909;
+}
+.qixingriding{
+	margin-left: 15px;
+}
+.summary{
+	width: 472px;
+	height: 75px;
+	margin-top: 6px;
+	font-size: 18px;
+	color: #3E3E3E;
+}
+.summaryas{
+	margin-right: 15px;
+}
+/*右边的文字内容结束*/
+/*正在进行的活动结束*/
+/*参加活动结束*/
+/*我参与的活动结束*/
