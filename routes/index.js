@@ -19,5 +19,8 @@ router.get('/checkUserName',index.checkUserName);
 // 处理用户注册的数据
 router.post('/reg',index.reg);
 
+// 退出登录
+router.get('/lognUp',index.lognUp);
+
 
 module.exports = router;

@@ -111,9 +111,25 @@ index.reg = function(req,res){
 		if (!err && data){
 			// 注册成功，跳转首页
 			res.redirect('/');
+			// res.send('ok');
 		} else {
 			// 跳转回注册页面
 			res.redirect('back')
+		}
+	})
+}
+
+// 退出登录方法
+index.lognUp = function(req,res){
+	var uname = req.query.uname.trim();
+
+	userModel.update({uname:uname},{$set:{status:'0'}},function(err,data){
+		// console.log(err);
+		// console.log(data);
+		if(!err && data){
+			// 退出登录成功，跳转首页
+			// res.redirect('/');
+			res.send('ok');
 		}
 	})
 }

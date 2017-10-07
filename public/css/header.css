@@ -45,28 +45,35 @@
 	height:52px;
 	float:right;
 	display:block;
+
+	position:relative;
 }
-.login-help-Success a{
+
+.login-help-Success>a{
 	display:inline-block;
 	text-align:center;
 	line-height:52px;
 	text-decoration:none;
 }
-.login-help-Success a.login-success{
+.login-help-Success>a.login-success{
+	
+	width:122px;
+
 	float:left;
 	font-size: 16px;
-	color: #777777;
+	color: #000;
 }
-.login-help-Success a.login-success img{
-	width:49px;
-	height:49px;
+.login-help-Success>a.login-success img{
+	width:38px;
+	height:38px;
 	float:left;
 	margin-right:10px;
+	margin-top:8px;
 }
-.login-help-Success a.login-success span{
-	margin-right:20px;
+.login-help-Success>a.login-success span{
+	margin-right:30px;
 }
-.login-help-Success a.help{
+.login-help-Success>a.help{
 	width:120px;
 	height:52px;
 	background: #fff;
@@ -74,6 +81,63 @@
 	float:right;
 	font-size: 20px;
 	color: #777777;
+}
+
+/*三角*/
+.login-help-signUp>.sanjiao{
+	width:0;
+	height:0;
+	position:absolute;
+	z-index:9999;
+	top:-25px;
+	left:50%;
+	margin-left:-10px;
+	/*border:12px solid #00f;*/
+	border-width:12px;
+	border-style:solid;
+	border-color:transparent;
+	border-bottom-color:#cdcdcd;
+	/*border:1px solid #ccc;*/
+}
+/*退出登录样式*/
+.login-help-signUp{
+	display:none;
+	width:122px;
+	height:69px;
+	/*line-height:30px;*/
+	font-size:14px;
+	text-align:center;
+	background:#fff;
+	/*border:1px solid #ccc;*/
+	border-radius:3px;
+	box-shadow:0px 1px 3px 0px #777;
+	position:absolute;
+	z-index:999;
+	top:50px;
+	left:0;
+}
+.login-help-signUp>a{
+	height:30px;
+	display:block;
+	text-decoration:none;
+	color:#777777;
+	overflow:hidden;
+}
+.login-help-signUp>a:first-child{
+	margin-top:10px;
+}
+.login-help-signUp>a:hover{
+	color:#158FE1;
+}
+.login-help-signUp>a>img{
+	width:18px;
+	height:14px;
+	float:left;
+	margin-right:10px;
+	margin-left:16px;
+}
+.login-help-signUp>a>span{
+	float:left;
 }
 
 
