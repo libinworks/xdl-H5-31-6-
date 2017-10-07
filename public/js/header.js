@@ -312,3 +312,35 @@ function loginSuccess(uname){
 	})
 }
 
+// 鼠标移入头像或名字效果
+$(function(){
+	$('.login-help-Success').mouseover(function(){
+		$('.login-help-signUp').css({display:'block'});
+	}).mouseout(function(){
+		$('.login-help-signUp').css({display:'none'});
+	})
+})
+
+// 退出登录
+$(function(){
+	$('#dropOutLogin').on('click',function(){
+		var uname = $('.login-success>span').html().trim();
+		$.ajax({
+			url: '/lognUp',
+			data: {
+				uname: uname
+			},
+			type: 'get',
+			success: function(data){
+				if(data === "ok"){
+					console.log('退出成功');
+					location.reload();
+				}
+			},
+			error: function(error){
+				console.log(error);
+			}
+		})
+	})
+})
+
