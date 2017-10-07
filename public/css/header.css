@@ -103,6 +103,8 @@
 	border: 1px solid #979797;
 	margin-top:13.5px;
 	font-size:20px;
+	outline:none;
+	padding-left:10px;
 }
 .search-btn{
 	float:left;
@@ -257,11 +259,12 @@
 	width:425px;
 	height:66px;
 	background: #3A86EF;
-	border-radius: 8px;
+	/*border-radius: 8px;*/
 	margin-top:20px;
 	font-size: 24px;
 	color: #FFFFFF;
-	letter-spacing:3px
+	letter-spacing:3px;
+	border:none;
 }
 .signUp{
 	float:right;
@@ -342,6 +345,7 @@
 	border: 1px solid #979797;
 	border-radius: 5px;
 	outline:none;
+	padding-left:10px;
 }
 .userAgreement-wrap{
 	display:block;
@@ -364,12 +368,13 @@
 	height:66px;
 	line-height:66px;
 	background: #3A86EF;
-	border-radius: 8px;
+	/*border-radius: 8px;*/
 	margin-top:25px;
 	font-size: 24px;
 	color: #FFFFFF;
 	letter-spacing:3px;
 	outline:none;
+	border:none;
 }
 /*注册提示*/
 .loginPrompt-reg{

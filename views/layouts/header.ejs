@@ -90,7 +90,8 @@
 				<input type="password" id="pwd" name="pwd" placeholder="密码">
 				<div class="autoLogin">
 					<input type="checkbox" id="chkBox" name="chkBox">
-					<span>下次自动登录</span>
+					<!-- <span>下次自动登录</span> -->
+					<label for="chkBox">下次自动登录</label>
 				</div>
 				<div class="loginProblem">
 					<a href="#">登录遇到问题</a>
@@ -121,7 +122,7 @@
 				</div>
 				<div>
 					<label for="">手机号</label>
-					<input type="Number" id="reg_tel" name="reg_tel" oninput="if(value.length>11)value=value.slice(0,11)">
+					<input type="text" id="reg_tel" name="reg_tel" oninput="if(value.length>11)value=value.slice(0,11)" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
 				</div>
 				<div id="yzm-wrap">
 					<label for="">验证码</label>
@@ -134,10 +135,14 @@
 				</div>
 				<span class="userAgreement-wrap">
 					<input type="checkbox" id="chkBox_reg" name="chkBox_reg">
-					<span class="userAgreement">阅读并接受
+					<!-- <span class="userAgreement">阅读并接受
 						<a href="">《柏岁用户协议》</a>及
 						<a href="">《柏岁隐私权保护声明》</a>
-					</span>
+					</span> -->
+					<label for="chkBox_reg" class="userAgreement">阅读并接受
+						<a href="">《柏岁用户协议》</a>及
+						<a href="">《柏岁隐私权保护声明》</a>
+					</label>
 				</span>
 				<button id="btn_reg">注册</button>
 			</form>
