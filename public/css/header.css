@@ -71,7 +71,12 @@
 	margin-top:8px;
 }
 .login-help-Success>a.login-success span{
-	margin-right:30px;
+	float:left;
+	width:66px;
+	text-align:left;
+	overflow:hidden;
+	text-overflow:ellipsis;
+    white-space: nowrap;
 }
 .login-help-Success>a.help{
 	width:120px;
