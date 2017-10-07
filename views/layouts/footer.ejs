@@ -1,0 +1,39 @@
+	
+	<p>&copy;版权所有，违法必究</p>
+	
+</body>
+<script>
+	/*
+		JS文件的位置：
+			1. 出现在body的后面
+			2. 写在任意位置，必须要添加	
+				window.onload
+				$.ready()
+				$(function() {
+					
+				})
+	*/
+
+	$(function() {
+		// 判断url地址 截取指定的分类 tab
+		// console.log(location.href.indexOf('tab'))
+		var tabIndex =  location.href.indexOf('tab');
+		// console.log(tabIndex);
+		if (tabIndex==-1) {
+			tab = 'index'
+		} else {
+			var newUrl = location.href.substring(tabIndex);
+			var tab = newUrl.split('&')[0].substring(newUrl.split('&')[0].indexOf('=')+1);
+		}
+
+		// console.log(tab);
+
+		// 移除导航默认选中的元素
+		// $('#headernav li.active').removeClass('active');
+
+		// 当前这个
+		$('[data-tab='+tab+']').addClass('active');
+	})
+
+</script>
+</html>
