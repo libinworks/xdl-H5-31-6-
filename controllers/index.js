@@ -16,9 +16,6 @@ index.index = function(req, res) {
 	})
 	// res.render('index');
 }
-<<<<<<< HEAD
-=======
-
 index.help = function(req,res){
 	userModel.findOne({status : '1'},function(err,data){
 		if(!err && data){
@@ -39,7 +36,6 @@ index.personalPage = function(req,res){
 		}
 	})
 }
->>>>>>> 完成
 // 加载用户注册页面
 // index.reg = function(req, res) {
 	
@@ -84,7 +80,6 @@ index.checkUser = function(req,res){
 		}
 	})
 }
-<<<<<<< HEAD
 
 // 登录成功
 index.loginSuccess = function(req,res){
@@ -115,7 +110,9 @@ index.checkUserName = function(req,res){
 		}else{
 			// 该用户不存在 可用
 			res.send('ok');
-=======
+		}
+	})
+}
 
 // 登录成功
 index.loginSuccess = function(req,res){
@@ -124,13 +121,10 @@ index.loginSuccess = function(req,res){
 		if(!err && data){
 			// 分配数据
 			res.render('header',{data:data});
->>>>>>> 完成
 		}
 	})
 }
 
-<<<<<<< HEAD
-=======
 // 注册 验证用户名
 index.checkUserName = function(req,res){
 	var uname = req.query.uname.trim();
@@ -153,7 +147,6 @@ index.checkUserName = function(req,res){
 	})
 }
 
->>>>>>> 完成
 //处理用户注册的数据
 index.reg = function(req,res){
 

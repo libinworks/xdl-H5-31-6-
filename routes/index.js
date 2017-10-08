@@ -2,11 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 // 加载控制器
-<<<<<<< HEAD
-var index = require('../controllers/index')
-=======
 var index = require('../controllers/index');
->>>>>>> 完成
+
 
 /* GET home page. */
 router.get('/', index.index);
@@ -29,7 +26,6 @@ router.post('/reg',index.reg);
 // 退出登录
 router.get('/lognUp',index.lognUp);
 
-<<<<<<< HEAD
 // 登录验证
 router.post('/checkUser', index.checkUser);
 
@@ -45,7 +41,5 @@ router.post('/reg',index.reg);
 // 退出登录
 router.get('/lognUp',index.lognUp);
 
-=======
->>>>>>> 完成
 
 module.exports = router;
