@@ -323,8 +323,17 @@ $(function(){
 
 // 退出登录
 $(function(){
+	// 只让登录后的用户名显示三个 其余用..显示
+	var uname = $('.login-success-span').html();
+	var maxLength = 3;
+	var newUname;
+	if(uname.length > maxLength){
+		newUname = uname.substring(0,maxLength);
+	}
+	$('.login-success-span').html(newUname+'..');
+	
 	$('#dropOutLogin').on('click',function(){
-		var uname = $('.login-success>span').html().trim();
+		// var uname = $('.login-success>span').html().trim();
 		$.ajax({
 			url: '/lognUp',
 			data: {
@@ -343,4 +352,5 @@ $(function(){
 		})
 	})
 })
+
 
