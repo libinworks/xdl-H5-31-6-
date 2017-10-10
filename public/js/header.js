@@ -1,8 +1,13 @@
 // 导航切换
 $(function(){
-	$('.nav>ul>li').on('click',function(){
-		$(this).addClass('active').siblings().removeClass('active');
-	})
+	var tabIndex =  location.href.indexOf('tab');
+	if (tabIndex==-1) {
+		tab = 'index';
+	} else {
+		var newUrl = location.href.substring(tabIndex);
+		var tab = newUrl.split('&')[0].substring(newUrl.split('&')[0].indexOf('=')+1);
+	}
+	$('[data-tab='+tab+']').addClass('active');
 })
 
 //登录

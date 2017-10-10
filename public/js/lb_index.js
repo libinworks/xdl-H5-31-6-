@@ -137,6 +137,7 @@ $(function(){
 			{'-webkit-transform': 'translateZ(-80px)','transform': 'translateZ(-80px)','-webkit-filter':'brightness(0.6)','filter':'brightness(0.6)','left':'640px','z-index':+c},
 			{'-webkit-transform': 'translateZ(-80px)','transform': 'translateZ(-80px)','-webkit-filter':'brightness(0.6)','filter':'brightness(0.6)','left':'-40px','z-index':+d}
 		]
+		// rank();
     })
     // 返回顶部
     $('#returnTop').click(function () {
@@ -166,14 +167,14 @@ $(function(){
     	goTop();
     }
     function goTop(){
-    	var start = $('#concrete .plate').eq(0).position().top-document.documentElement.scrollTop;
+    	var start = $('#concrete .plate').eq(0).position().top-$(window).scrollTop();
     	if(start <= 0){
     		$('#floor').css('opacity','1');
     	}else{
     		$('#floor').css('opacity','0');
     	}
     	for(var i=0;i < $('.plate').length;i++){
-    		var backtop = $('.plate').eq(i).position().top-document.documentElement.scrollTop;
+    		var backtop = $('.plate').eq(i).position().top-$(window).scrollTop();
     		if(backtop <= 0){
     			$('#floor>li>div').eq(i).addClass('floorCircle1');
     			$('#floor>li>div').eq(i).parent().css('background-color','#BAE0F6').siblings().css('background-color','transparent');

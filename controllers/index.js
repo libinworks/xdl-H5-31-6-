@@ -16,6 +16,7 @@ index.index = function(req, res) {
 	})
 	// res.render('index');
 }
+
 index.help = function(req,res){
 	userModel.findOne({status : '1'},function(err,data){
 		if(!err && data){
@@ -23,6 +24,16 @@ index.help = function(req,res){
 			res.render('lb_help',{data:data,st:1});
 		}else{
 			res.render('lb_help',{st:0});
+		}
+	})
+}
+index.baisuibang = function(req,res){
+	userModel.findOne({status : '1'},function(err,data){
+		if(!err && data){
+			// 分配数据
+			res.render('lulu',{data:data,st:1});
+		}else{
+			res.render('lulu',{st:0});
 		}
 	})
 }
@@ -77,39 +88,6 @@ index.checkUser = function(req,res){
 		} else {
 			// 该账户不存在，提示用户用户名不存在，请重新填写或注册
 			res.send('used');
-		}
-	})
-}
-
-// 登录成功
-index.loginSuccess = function(req,res){
-	var uname = req.query.uname.trim();
-	userModel.findOne({uname : uname},function(err,data){
-		if(!err && data){
-			// 分配数据
-			res.render('header',{data:data});
-		}
-	})
-}
-
-// 注册 验证用户名
-index.checkUserName = function(req,res){
-	var uname = req.query.uname.trim();
-	if(uname == ''){
-		// 发送响应
-		res.send('isNull')
-
-		// 终止程序
-		return;
-	}
-	// 将用户提交过来的数据，与数据库中现有的数据进行对比
-	userModel.findOne({uname:uname},function(err,data){
-		if(!err && data){
-			// 说明账户已经存在
-			res.send('used');
-		}else{
-			// 该用户不存在 可用
-			res.send('ok');
 		}
 	})
 }

@@ -1,0 +1,99 @@
+ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+/*内容部分中间区域开始*/
+.center{
+	width: 626px;
+	height: 400px;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+/*选项卡开始*/
+.option{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.option ul li{
+	float: left;
+	margin-right: 30px;
+	font-size: 24px;
+}
+.option ul li a{
+color: #393939;	
+}
+.option ul li .haoyou{
+	color: #158FE1;
+}
+/*选项卡美容区域开始*/
+.Friends{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	display: none;
+}
+.xianshi{
+	display: block;
+}
+.cian{
+	width: 100%;
+	height: 2px;
+	float: left;
+	background: #F0F0F0;
+	margin-top: 20px;
+}
+/*选项卡内容区域结束*/
+.madel{
+	width: 100%;
+	height: auto;
+	margin-top: 8px;
+	overflow: hidden;
+	clear: both;
+}
+.madel ul li{
+	width: 146px;
+	height: 260px;
+	float: left;
+	border: 1px solid #979797;
+	text-align: center;
+	margin-right: 11px;
+	margin-top: 15px;
+}
+.img{
+	width: 144px;
+	height: 144px;
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.50);
+}
+.p1{
+	font-size: 18px;
+color: #3E3E3E;
+margin-top: 8px;
+text-align: left;
+margin-left: 5px;
+}
+.p2{
+		font-size: 18px;
+color: #FF909D;
+margin-top: 8px;
+text-align: left;
+margin-left: 5px;
+}
+.btn{
+	font-size: 20px;
+	padding:2px 20px;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+	background: #158FE1;
+	margin-top: 10px;
+}
+.btn a{
+	color:#fff;
+}
+
+.madel ul .right{
+	margin-right: 0;
+}

@@ -1,0 +1,136 @@
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+/*内容部分中间区域开始*/
+.center{
+	width: 626px;
+	height: 400px;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+/*选项卡开始*/
+.option{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.option ul li{
+	float: left;
+	margin-right: 30px;
+	font-size: 24px;
+}
+.option ul li a{
+color: #393939;	
+}
+.option ul li .haoyou{
+	color: #158FE1;
+}
+/*选项卡美容区域开始*/
+.Friends{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	display: none;
+}
+.xianshi{
+	display: block;
+}
+/*选项卡内容区域结束*/
+.AddTo{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.AddTo p{
+	text-align: center;
+	margin-top: 70px;
+	font-size: 24px;
+color: #000000;
+}
+.AddTo button{
+	padding:1px 30px;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+	background: #158FE1;
+	margin-top: 20px;
+}
+.AddTo button a{
+	color:#fff;
+}
+/*好友开始*/
+.Shadowresults{
+	width: 100%;
+	height: 400px;
+	margin-top: 10px;
+	overflow: hidden;
+	display: none;
+}
+/*具体内容开始*/
+.specific{
+	width: 100%;
+	height: 110px;
+	margin-top: 20px;
+	clear: both;
+}
+.Headportrait{
+	width: 110px;
+	height: 110px;
+	float: left;
+}
+.Headportrait img{
+	width: 100%;
+	height: 100%;
+}
+.Textarea{
+	width: 450px;
+	height: 110px;
+	float: left;
+	margin-left:20px;
+}
+.nickname{
+	font-size: 22px;
+color: #3E3E3E;
+margin-right: 30px;
+}
+.Grade{
+	font-size: 18px;
+color: #3E3E3E;
+}
+.medal{
+	width: 100%;
+	height: 26px;
+	margin-top: 15px;
+	clear: both;
+}
+.medal-1{
+	width: 200px;
+	height: 26px;
+	float: left;
+	clear: both;
+}
+.medal-1 span{
+	font-size: 18px;
+color: #3E3E3E;
+float: left;
+}
+.medal-1 ul li{
+	float: left;
+	margin-right:20px;
+}
+.medal span{
+	font-size: 18px;
+color: #3E3E3E;
+}
+.p2{
+	margin-top: 15px;
+	font-size: 18px;
+color: #3E3E3E;
+}
+/*具体内容结束*/
+/*好友结束*/
+/*选项卡结束*/
+/*内容部分中间区域结束*/

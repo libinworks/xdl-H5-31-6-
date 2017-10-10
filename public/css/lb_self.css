@@ -179,8 +179,9 @@ a:hover img{
 	margin-top:3px;
 	float:right;
 	width:244px;
-	height:720px;
+	height:970px;
 	padding:0 10px;
+	margin-bottom:40px;
 	border:1px solid #979797;
 }
 #contentFooterRight>h3{
