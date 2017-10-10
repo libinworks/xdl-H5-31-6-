@@ -1,0 +1,144 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.container{
+	width:1100px;
+	margin:40px auto;
+}
+header{
+	width:1190px;
+	height:80px;
+	background:#F0EDEE;
+	margin:0 auto;
+	margin-top:40px;
+	position:relative;
+}
+header .h-img{
+	position:absolute;
+	left:45px;
+	bottom:40px;
+	width:200px;
+	height:80px;
+	display:flex;
+}
+header .h-img .h-im{
+	width:88px;
+	height:88px;
+	border-radius:5px;
+	overflow:hidden;
+}
+header .h-img .h-im img{
+	width:100%;
+	height:auto;
+}
+header .h-img .h-con{
+	margin-left:10px;
+	line-height:128px;
+}
+header .h-content{
+	border:1px solid #CCC;
+	margin-left:894px;
+	width:134px;
+	height:44px;
+	padding:5px;
+}
+header .h-content .cont{
+	border:1px solid #CCC;
+	height:100%;
+	display:flex;
+	text-align:center;
+	line-height:30px;
+}
+header .h-content .cont .qian{
+	width:65px;
+	height:100%;
+	color:#FFF;
+	background:#0897DC;
+}
+header .h-content .cont .guan{
+	width:65px;
+	height:100%;
+}
+nav{
+	width:1190px;
+	height:50px;
+	background:#2F323E;
+	margin:0 auto;
+}
+nav ul{
+	display:flex;
+	height:100%;
+	margin-left:10px;
+}
+nav ul li{
+	width:80px;
+	height:100%;
+	text-align:center;
+	line-height:50px;
+	font-size:16px;
+	color:#FFF;
+}
+section{
+	width:1190px;
+	height:730px;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+section ul{
+	width:100%;
+	height:auto;
+	margin-top:20px;
+}
+section ul li{
+	margin-bottom:16px;
+	display:flex;
+}
+section ul li .li-top{
+	width:34px;
+	height:20px;
+	background:#0897DC;
+	margin-right:15px;
+	border-radius:5px;
+	color:#FFF;
+	text-align:center;
+	line-height:20px;
+	font-size:12px;
+}
+section ul li .li-bottom .one{
+	font-size:14px;
+	font-weight:700;
+	color:#333;
+	margin-bottom:6px;
+}
+section ul li .li-bottom .two{
+	font-size:12px;
+	margin-bottom:6px;
+	color:#666;
+}
+section ul li .li-bottom .three{
+	width:1088px;
+	height:88px;
+	margin-bottom:6px;
+	display:flex;
+}
+section ul li .li-bottom .three img{
+	width:88px;
+	height:auto;
+	margin-right:18px;
+}
+section ul li .li-bottom .four{
+	font-size:12px;
+	color:#666;
+	margin-bottom:8px;
+}
+section ul li .li-bottom .four span{
+	margin-right:18px;
+}
+footer{
+	width:1190px;
+	height:40px;
+	margin:0 auto;
+	background:#2C3339;
+}

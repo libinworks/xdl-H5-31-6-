@@ -1,0 +1,49 @@
+* { margin:0; padding:0; }
+		html { font-family:PingFangSC-Regula; font-size:24px; }
+		a { text-decoration:none; }
+		li { list-style:none; }
+		img { display:block; }
+		.main { width:1100px; margin:0 auto; height:auto; }
+		.left { float:left; }
+		.right { float:right; }
+		.clear { overflow:hidden; }
+		/*站点样式*/
+		.adbar { margin-bottom:45px; margin-top:30px;  }
+		/*文章标题样式*/
+		.article_tit { margin-bottom:28px; }
+		.article_tit h2 { font-size:30px; width:100%; text-align:center; border-bottom:2px solid #4A4A4A; padding-bottom:20px; margin-bottom:20px;  } 
+		.article_tit_sec, .article_tit_sec span { font-size:20px; color:#383838; margin-bottom:10px; }
+		.article_tit_tag span { margin-right:35px; }
+		.article_tit_tag a { font-size:18px; color:#1a1a1a; margin-right:15px; } 
+
+		/*左边内容样式*/
+		.tj_content_left { width:760px; }
+		.article_cont img { width:760px; height: 380px; background:green; margin-bottom:25px; }
+		.article_cont_tit { width:660px; margin:0 auto; font-size:20px; color:#9B9B9B; margin-bottom:55px; }
+		.article_cont_text { margin-bottom:40px; text-indent:2em; color:#4A4A4A; }
+		/*查看更多样式*/
+		.look_more {  width:100%; margin-bottom:60px; }
+		.look_more p:first-child { margin-left:570px; margin-bottom:80px; width:148px; height:48px; background:#9B9B9B; text-align:center; line-height:48px;  }
+		.look_more p:first-child a { color:#fff; }
+		.look_more p:last-child { margin-left:200px; }
+		.look_more p:last-child a { width:90px; height:46px; line-height:46px; text-align:center; color:#fff; margin-left:20px; background:#158FE1; display:inline-block; }
+		/*热点推荐样式*/
+		.groom_hot { margin-bottom:90px; }
+		.groom_hot_info { border-top:2px solid #F0F0F0; padding-top:30px; }
+		.groom_hot_info h4, .groom_xg h4 { width:156px; text-align:center; padding:4px 0; font-size:30px; color:#fff; margin-bottom:30px; background:#008CDC; }
+		.groom_hot_info_first { margin-bottom:40px; }
+		/*相关推荐样式*/
+		.xgtj { border-top:2px solid #4A4A4A; padding-top:90px; }
+		.groom_xg .groom_hot_info_fir { margin-bottom:20px; }
+		.groom_hot_info_sec { width:530px; font-size:20px; color:#383838; }
+		.groom_xg_zu { margin-bottom:20px; margin-right: 20px; }
+		/*右边内容样式*/
+		.tj_content_right { width:325px; }
+		.tj_content_right div:first-child { width:100%; height:192px; margin-bottom:30px; }
+		.tj_content_right div:first-child img { width:100%; height:192px; background:green; }
+		.tj_content_right div:nth-child(2) h3 { letter-spacing:4px; font-size:30px; color:#fff; text-align:center; background:#158FE1; }
+		.tj_content_right div:nth-child(2) ul { background:#2C323B; padding:10px; padding-top:20px; }
+		.tj_content_right div:nth-child(2) ul li { overflow:hidden; margin-bottom: 20px; }
+		.tj_content_right div:nth-child(2) ul li img { width:100px; height:100px; background:green; margin-right:20px;  }
+		.tj_content_right div:nth-child(2) ul li p span { color:#fff; font-size:20px; }
+		.tj_content_right div:nth-child(2) ul li a { display:inline-block;  }

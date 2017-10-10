@@ -13,6 +13,8 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<!-- 头部JS -->
 	<script src="/js/header.js"></script>
+
+	<link rel="stylesheet" href="/css/ybb_index.css">
 </head>
 <body>
 	<!-- 定义头部开始 -->
@@ -21,23 +23,23 @@
 		<div class="Welcome">
 			<span>欢迎来到柏岁网！</span>
 		</div>
-		<% if(st == '0'){ %>
+		<% if(!user){ %>
 			<div class="login-help">
-				<a id="login" class="login" href="#" >登录</a>
-				<a class="help" href="#">帮助</a>
+				<a id="login" class="login" >登录</a>
+				<a class="help" href="/help">帮助</a>
 			</div>
 		<% }else{ %>
 			<div class="login-help-Success">
 				<a href="#" class="login-success">
-					<img src="<%= data.img %>" alt="">
-					<span><%= data.uname %></span>
+					<img src="<%= user.img %>" alt="">
+					<span><%= user.uname %></span>
 				</a>
-				<a class="help" href="#">帮助</a>
+				<a class="help" href="/help">帮助</a>
 				
 				<div class="login-help-signUp">
 					<!-- <div class="sanjiao"></div> -->
-					<a href="#"><img src="/imgs/zpf_grkj.png" alt=""><span>个人空间</span></a>
-					<a href="#" id="dropOutLogin"><img src="/imgs/zpf_tcdl.png" alt=""><span>退出登录</span></a>
+					<a href="/grkj/pd/?tab=index"><img src="/imgs/zpf_grkj.png" alt=""><span>个人空间</span></a>
+					<a href="" id="dropOutLogin"><img src="/imgs/zpf_tcdl.png" alt=""><span>退出登录</span></a>
 				</div>
 			</div>
 		<%}%>
@@ -64,13 +66,13 @@
 	<!-- 头部导航开始 -->
 	<div class="nav">
 		<ul>
-			<li class="active"><a href="#">首页</a></li>
-			<li><a href="#">新闻</a></li>
-			<li><a href="#">学习</a></li>
-			<li><a href="#">活动</a></li>
-			<li><a href="#">健康</a></li>
-			<li><a href="#">贴吧</a></li>
-			<li><a href="#">柏岁榜</a></li>
+			<li data-tab="index"><a href="/?tab=index">首页</a></li>
+			<li data-tab="sq_news"><a href="/news/?tab=sq_news">新闻</a></li>
+			<li data-tab="study"><a href="/study/xuexi_6/?tab=study">学习</a></li>
+			<li data-tab="sq_huodong"><a href="/huodong/?tab=sq_huodong">活动</a></li>
+			<li data-tab="healthy"><a href="/healthy/?tab=healthy">健康</a></li>
+			<li data-tab="postBar"><a href="/postBar/?tab=postBar">贴吧</a></li>
+			<li data-tab="baisuibang"><a href="/baisuibang/?tab=baisuibang">柏岁榜</a></li>
 		</ul>
 	</div>
 

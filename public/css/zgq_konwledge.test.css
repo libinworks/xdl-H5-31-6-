@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font-family: PinFangSC-Regular;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.container{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 20px;
+	margin-bottom:50px;
+}
+.container>p{
+	font-size: 24px;
+}
+
+/*规则*/
+.rule{
+	width: 1055px;
+	height: 137px;
+	background: #F9F0F0 50%;
+	margin: 0 auto;
+	margin-top: 47px;	
+}
+.rule>p{
+	font-size: 24px;
+	margin-top: 8px;
+	letter-spacing: 1px;
+	line-height: 33px;
+}
+.time{
+	width: 1055px;
+	font-size: 36px;
+	margin: 0 auto;
+	margin-top:33px;
+	display: flex;
+	justify-content: space-between;
+}
+.time input{
+	padding: 10px 10px;
+	width: 42px;
+	font-size: 24px;
+}
+.line{
+	width: 1100px;
+	height: 5px;
+	clear: both;
+	background: #F0F0F0;
+	margin-top: 2px;
+}
+/*题目*/
+.subject{
+	width: 1055px;
+	margin: 0 auto;
+	font-size: 24px;
+	margin-top: 28px;
+}
+.subject>ul>li>span>input{
+	border: 0;
+	width: 16px;
+	height: 10px;
+	padding: 8px;
+	outline: none;
+	font-size: 24px;
+}
+.answer{
+	margin-top: 10px;
+	margin-left: 85px;
+	margin-bottom: 10px;
+}
+.answer>p{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#times>div{
+	float:left;
+	margin-top:12px;
+}
+#time{
+	width:128px;
+	height:60px;
+	/*background:blue;*/
+	margin:0 auto;
+	/*overflow:hidden;*/
+}
+#hour,#minute,#second{
+	width:50px;
+	height:36px;
+	border-radius:5px;
+	line-height:36px;
+	color:#000;
+	text-align:center;
+	font-weight:bold;
+}
+.maohao{
+	width:10px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	font-weight:bold;
+}
