@@ -51,6 +51,7 @@ index.checkUser = function(req,res){
 				if(!err && data){
 					req.session.user = data;
 					res.send('ok');
+
 				}else{
 					// 密码不正确 请重新输入
 					res.send('upwd');
@@ -94,6 +95,7 @@ index.checkUserName = function(req,res){
 			res.send('ok');
 		}
 	})
+
 }
 
 //处理用户注册的数据
@@ -129,6 +131,7 @@ index.reg = function(req,res){
 index.lognUp = function(req,res){
 	req.session.user = null;
 	res.send('ok');
+
 }
 
 
