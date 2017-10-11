@@ -20,8 +20,12 @@ news.newsTj3 = function (req,res){
 	res.render('sq_news_childpage_tj_3');
 };
 
-news.newsWs = function (){ 
+news.newsWs = function (req,res){ 
 	res.render('sq_news_childpage_ws')
+};
+
+news.newsHduser = function (req,res){ 
+	res.render('sq_huodong_user')
 };
 
 module.exports = news;
