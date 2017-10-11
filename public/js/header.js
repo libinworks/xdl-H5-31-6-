@@ -1,5 +1,6 @@
 // 导航切换
 $(function(){
+
 	var tabIndex =  location.href.indexOf('tab');
 	if (tabIndex==-1) {
 		tab = 'index';
@@ -348,4 +349,15 @@ $(function(){
 		})
 	})
 })
+
+
+// // 判断注册成功 返回登录页面
+// $(function(){
+// 	alert(2);
+// 	if (regOK.length){
+// 		alert(1);
+// 		// $('#login-wrap').css({display:'block'});
+// 	}
+// })
+
 

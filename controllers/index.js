@@ -3,59 +3,27 @@ var index = {};
 
 // 加载user模型
 var userModel = require('../models/userModel');
+var cryptoStr = require('../config/crypto_config');
 
 // 定义方法
 index.index = function(req, res) {
-	userModel.findOne({status : '1'},function(err,data){
-		if(!err && data){
-			// 分配数据
-			res.render('index',{data:data,st:1});
-		}else{
-			res.render('index',{st:0});
-		}
-	})
-	// res.render('index');
+	res.render('index');
 }
 
 index.help = function(req,res){
-	userModel.findOne({status : '1'},function(err,data){
-		if(!err && data){
-			// 分配数据
-			res.render('lb_help',{data:data,st:1});
-		}else{
-			res.render('lb_help',{st:0});
-		}
-	})
+	res.render('lb_help');
 }
 index.baisuibang = function(req,res){
-	userModel.findOne({status : '1'},function(err,data){
-		if(!err && data){
-			// 分配数据
-			res.render('lulu',{data:data,st:1});
-		}else{
-			res.render('lulu',{st:0});
-		}
-	})
+	res.render('lulu');
 }
 index.personalPage = function(req,res){
-	userModel.findOne({status : '1'},function(err,data){
-		if(!err && data){
-			// 分配数据
-			res.render('lb_self',{data:data,st:1});
-		}else{
-			res.render('lb_self',{st:0});
-		}
-	})
+	res.render('lb_self');
 }
-// 加载用户注册页面
-// index.reg = function(req, res) {
-	
-// }
 
 // 验证登录信息
 index.checkUser = function(req,res){
 	var uname = req.body.uname.trim();
-	var pwd = req.body.pwd.trim();
+	var pwd = cryptoStr(req.body.pwd.trim());
 	
 	// 条件
 	var con = {
@@ -73,13 +41,9 @@ index.checkUser = function(req,res){
 			userModel.findOne(cons,function(err,data){
 				// 如果没错误 并且存在登录成功
 				if(!err && data){
+					req.session.user = data;
 					res.send('ok');
-					// 改变登录状态
-					userModel.update(con,{$set:{'status':'1'}},function(err,data){
-						if(!err && data){
-							//更改成功
-						}
-					})
+
 				}else{
 					// 密码不正确 请重新输入
 					res.send('upwd');
@@ -94,13 +58,10 @@ index.checkUser = function(req,res){
 
 // 登录成功
 index.loginSuccess = function(req,res){
-	var uname = req.query.uname.trim();
-	userModel.findOne({uname : uname},function(err,data){
-		if(!err && data){
-			// 分配数据
-			res.render('header',{data:data});
-		}
-	})
+	if(!err){
+		// 分配数据
+		res.render('header');
+	}
 }
 
 // 注册 验证用户名
@@ -123,6 +84,7 @@ index.checkUserName = function(req,res){
 			res.send('ok');
 		}
 	})
+
 }
 
 //处理用户注册的数据
@@ -132,7 +94,7 @@ index.reg = function(req,res){
 	var user = {
 		uname: req.body.reg_uname.trim(),
 		tel: req.body.reg_tel,
-		pwd: req.body.reg_pwd
+		pwd: cryptoStr(req.body.reg_pwd)
 	}
 
 	// 创建数据
@@ -140,29 +102,24 @@ index.reg = function(req,res){
 		// console.log(err);
 		// console.log(data);
 		if (!err && data){
+
+			// 传递一次性的消息
+			req.flash('users',data);
 			// 注册成功，跳转首页
 			res.redirect('/');
 			// res.send('ok');
 		} else {
 			// 跳转回注册页面
-			res.redirect('back')
+			res.redirect('back');
 		}
 	})
 }
 
 // 退出登录方法
 index.lognUp = function(req,res){
-	var uname = req.query.uname.trim();
+	req.session.user = null;
+	res.send('ok');
 
-	userModel.update({uname:uname},{$set:{status:'0'}},function(err,data){
-		// console.log(err);
-		// console.log(data);
-		if(!err && data){
-			// 退出登录成功，跳转首页
-			// res.redirect('/');
-			res.send('ok');
-		}
-	})
 }
 
 

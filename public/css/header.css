@@ -5,6 +5,7 @@
 	margin:0 auto;	
 }
 .Welcome{
+
 	/*width:180px;*/
 	float:left;
 }
@@ -31,6 +32,8 @@
 	float:left;
 	font-size: 20px;
 	color: #FFFFFF;
+	cursor:pointer;
+
 }
 .login-help a.help{
 	background: #fff;

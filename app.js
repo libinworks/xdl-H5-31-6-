@@ -48,10 +48,15 @@ app.use(session({
 // 配置
 app.use(flash())
 app.use(express.static(path.join(__dirname, 'public')));
+
 // 自定义中间件处理
 app.use(function(req, res, next) {
 	
-
+	// 记录用户登录信息
+	res.locals.user = req.session.user;
+	
+	// 记录用户注册成功
+	res.locals.users = req.flash('users').length?req.flash('users'):null;
 	// next() 移交权限
 	next()
 });
