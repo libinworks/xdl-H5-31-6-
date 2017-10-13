@@ -4,7 +4,6 @@ var index = {};
 // 加载user模型
 var userModel = require('../models/userModel');
 var loginModel = require('../models/loginModel');
-
 var cryptoStr = require('../config/crypto_config');
 
 // 定义方法
@@ -46,10 +45,8 @@ index.checkUser = function(req,res){
 					// req.session.user = data;
 					// res.send('ok');
 					loginModel.findOne({_id:data._id}).populate('userID',{username:1,userImg:1}).exec(function(err,data){
-						
 						req.session.user = data;
 						res.send('ok');
-					
 					})
 
 				}else{
@@ -97,7 +94,6 @@ index.checkUserName = function(req,res){
 
 //处理用户注册的数据
 index.reg = function(req,res){
-
 	userModel.create({username:req.body.reg_uname.trim()},function(err,data){
 		if(!err && data){
 			var  userId = data._id;

@@ -19,7 +19,6 @@ news.newsTj = function (req,res){
 news.newsTj3 = function (req,res){ 
 	res.render('sq_news_childpage_tj_3');
 };
-
 news.newsWs = function (req,res){ 
 	res.render('sq_news_childpage_ws')
 };
