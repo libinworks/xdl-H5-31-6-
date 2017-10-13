@@ -56,8 +56,7 @@ app.use(function(req, res, next) {
 	res.locals.user = req.session.user;
 	
 	// 记录用户注册成功
-	// res.locals.regOK = req.flash('regOK');
-
+	res.locals.users = req.flash('users').length?req.flash('users'):null;
 	// next() 移交权限
 	next()
 });

@@ -19,5 +19,7 @@ router.get('/tj3',news.newsTj3);
 // 文史
 router.get('/ws',news.newsWs);
 
+router.get('/hduser',news.newsHduser);
+
 
 module.exports = router;

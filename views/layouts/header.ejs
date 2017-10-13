@@ -23,16 +23,11 @@
 		<div class="Welcome">
 			<span>欢迎来到柏岁网！</span>
 		</div>
-		<% if(!user){ %>
-			<div class="login-help">
-				<a id="login" class="login" >登录</a>
-				<a class="help" href="/help">帮助</a>
-			</div>
-		<% }else{ %>
+		<% if(user){%>
 			<div class="login-help-Success">
 				<a href="#" class="login-success">
-					<img src="<%= user.img %>" alt="">
-					<span><%= user.uname %></span>
+					<img src="<%= user.userID.userImg %>" alt="">
+					<span><%= user.userID.username %></span>
 				</a>
 				<a class="help" href="/help">帮助</a>
 				
@@ -41,6 +36,12 @@
 					<a href="/grkj/pd/?tab=index"><img src="/imgs/zpf_grkj.png" alt=""><span>个人空间</span></a>
 					<a href="" id="dropOutLogin"><img src="/imgs/zpf_tcdl.png" alt=""><span>退出登录</span></a>
 				</div>
+			</div>
+			
+		<% }else{%>
+			<div class="login-help">
+				<a id="login" class="login" >登录</a>
+				<a class="help" href="/help">帮助</a>
 			</div>
 		<%}%>
 		
@@ -80,7 +81,7 @@
 	<!-- 定义头部结束 -->
 	
 	<!-- 登录框 -->
-	<div id="login-wrap">
+	<div style="display:<%= users?'block':'none'%>" id="login-wrap">
 		<!-- 登录框 -->
 		<div id="login-pop">
 			<!-- <button id="close">x</button> -->
