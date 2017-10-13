@@ -29,22 +29,28 @@ index.checkUser = function(req,res){
 	
 	// 条件
 	var con = {
-		uname: uname
+		username: uname
 	}
 	var cons = {
-		uname: uname,
+		username: uname,
 		pwd: pwd
 	}
 	// 验证该用户是否存在
-	userModel.findOne(con, function(err, data){
+	loginModel.findOne(con, function(err, data){
 		// console.log(data);
 		if (!err && data) {
 			// 说明账户已经存在了，判断登录密码是否正确
-			userModel.findOne(cons,function(err,data){
+			loginModel.findOne(cons,function(err,data){
 				// 如果没错误 并且存在登录成功
 				if(!err && data){
-					req.session.user = data;
-					res.send('ok');
+					// req.session.user = data;
+					// res.send('ok');
+					loginModel.findOne({_id:data._id}).populate('userID',{username:1,userImg:1}).exec(function(err,data){
+						
+						req.session.user = data;
+						res.send('ok');
+					
+					})
 
 				}else{
 					// 密码不正确 请重新输入
