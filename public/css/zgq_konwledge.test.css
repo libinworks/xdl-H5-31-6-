@@ -48,7 +48,7 @@ a:hover{
 }
 .time input{
 	padding: 10px 10px;
-	width: 42px;
+	width: 70px;
 	font-size: 24px;
 }
 .line{
@@ -85,7 +85,7 @@ a:hover{
 
 #times>div{
 	float:left;
-	margin-top:12px;
+	margin-top:7px;
 }
 #time{
 	width:128px;

@@ -80,6 +80,9 @@
 	overflow:hidden;
 	text-overflow:ellipsis;
     white-space: nowrap;
+    margin:0;
+    font-size:16px;
+    color:#000;
 }
 .login-help-Success>a.help{
 	width:120px;
@@ -146,6 +149,9 @@
 }
 .login-help-signUp>a>span{
 	float:left;
+	margin: 0;
+    font-size: 16px;
+    color: #000;
 }
 
 

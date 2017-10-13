@@ -88,6 +88,9 @@ a:hover{
 	border: 3px solid #979797;
 	float: left;
 	border-right: 0px;
+	font-size: 36px;
+    padding-left: 20px;
+	outline:none;
 }
 .signin>button{
 	width: 160px;
