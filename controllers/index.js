@@ -3,6 +3,8 @@ var index = {};
 
 // 加载user模型
 var userModel = require('../models/userModel');
+var loginModel = require('../models/loginModel');
+
 var cryptoStr = require('../config/crypto_config');
 
 // 定义方法
@@ -75,7 +77,7 @@ index.checkUserName = function(req,res){
 		return;
 	}
 	// 将用户提交过来的数据，与数据库中现有的数据进行对比
-	userModel.findOne({uname:uname},function(err,data){
+	loginModel.findOne({username:uname},{username:1},function(err,data){
 		if(!err && data){
 			// 说明账户已经存在
 			res.send('used');
@@ -90,29 +92,50 @@ index.checkUserName = function(req,res){
 //处理用户注册的数据
 index.reg = function(req,res){
 
-	// 参数
-	var user = {
-		uname: req.body.reg_uname.trim(),
-		tel: req.body.reg_tel,
-		pwd: cryptoStr(req.body.reg_pwd)
-	}
+	userModel.create({username:req.body.reg_uname.trim()},function(err,data){
+		if(!err && data){
+			var  userId = data._id;
 
-	// 创建数据
-	userModel.create(user, function(err, data) {
-		// console.log(err);
-		// console.log(data);
-		if (!err && data){
+			// 参数
+			var user = {
+				username: req.body.reg_uname.trim(),
+				tel: req.body.reg_tel,
+				pwd: cryptoStr(req.body.reg_pwd),
+				userID:data._id
+			}
 
-			// 传递一次性的消息
-			req.flash('users',data);
-			// 注册成功，跳转首页
-			res.redirect('/');
-			// res.send('ok');
-		} else {
-			// 跳转回注册页面
-			res.redirect('back');
+			loginModel.create(user,function(err,data){
+				if (!err && data){
+
+				// 传递一次性的消息
+				req.flash('users',data);
+				// 注册成功，跳转首页
+				res.redirect('/');
+				// res.send('ok');
+				} else {
+					// 跳转回注册页面
+					res.redirect('back');
+				}
+			})
 		}
 	})
+
+	// 创建数据
+	// userModel.create(user, function(err, data) {
+	// 	// console.log(err);
+	// 	// console.log(data);
+	// 	if (!err && data){
+
+	// 		// 传递一次性的消息
+	// 		req.flash('users',data);
+	// 		// 注册成功，跳转首页
+	// 		res.redirect('/');
+	// 		// res.send('ok');
+	// 	} else {
+	// 		// 跳转回注册页面
+	// 		res.redirect('back');
+	// 	}
+	// })
 }
 
 // 退出登录方法
