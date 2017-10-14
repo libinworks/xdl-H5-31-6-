@@ -320,6 +320,10 @@ var trans = {
   var app = new Build();
   app.run();
 })();
+window.addEventListener('resize', function() {
+  canvas.width = w = window.innerWidth;
+  canvas.height = h = window.innerHeight;
+}, false);
 $('#lb_look').click(function(){
   $('#error').animate({ 
     top:'10%'
@@ -333,7 +337,7 @@ $('#lb_look').click(function(){
 });
 $('#error>span').click(function(){
   $('#error').animate({ 
-    top:'-100%'
+    top:'-900%'
   },400);
    $('#err').animate({
     top:'30%'
