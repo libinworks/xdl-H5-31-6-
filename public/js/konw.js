@@ -60,11 +60,7 @@
 
 	//  节点操作
  // 添加节点
- $('.subject>ul>li .answer>p>span').on('click',function(){
+ $('.answer>p>span').on('click',function(){
  	var san = $(this).html();
-	$(this).parent().parent().prev().children().html(san);
-	
-	
-	//alert(wu);
- 	//$('.sss>span').html(wu);
+ 	 $('.sss>span').html(san);
  })
