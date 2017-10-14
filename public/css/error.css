@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+  background-image: radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+#err,#lb_look{
+	position:absolute;
+	width:100%;
+	color:#fff;
+	font-size:56px;
+	text-align:center;
+	top:30%;
+}
+#lb_look{
+	top:50%;
+	font-size:26px;
+	cursor:pointer;
+}
+#error{
+	position:absolute;
+	top:-100%;
+	width:800px;
+	height:80%;
+	left:50%;
+	margin-left:-400px;
+}
+#error>span{
+	float:right;
+	line-height:30px;
+	font-size:20px;
+	padding:0 8px;
+	cursor:pointer;
+	color:#fff;
+}
+#error>p{
+	margin-top:30px;
+	color:#fff;
+}
