@@ -3,7 +3,7 @@ module.exports = function(req, res, next) {
 	// 判断是否登录
 	if (!req.session.user) {
 		// 跳转登录页
-		res.redirect('/login');
+		res.redirect('/');
 
 		// 终止
 		return;
