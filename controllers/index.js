@@ -4,7 +4,6 @@ var index = {};
 // 加载user模型
 var userModel = require('../models/userModel');
 var loginModel = require('../models/loginModel');
-
 var cryptoStr = require('../config/crypto_config');
 
 var uploadFile = require('../config/uploadFile_config');
@@ -46,7 +45,6 @@ index.checkUser = function(req,res){
 			loginModel.findOne(cons,function(err,data){
 				// 如果没错误 并且存在登录成功
 				if(!err && data){
-
 					// 更改登录时间
 					loginModel.update({_id:data._id},{LastloginTime:Date.now()},function(err){
 						if(!err){
@@ -59,8 +57,7 @@ index.checkUser = function(req,res){
 						}
 					})
 
-					// req.session.user = data;
-					// res.send('ok');
+
 
 				}else{
 					// 密码不正确 请重新输入
@@ -107,7 +104,6 @@ index.checkUserName = function(req,res){
 
 //处理用户注册的数据
 index.reg = function(req,res){
-
 	userModel.create({username:req.body.reg_uname.trim()},function(err,data){
 		if(!err && data){
 			var  userId = data._id;
@@ -215,6 +211,23 @@ index.editImg = function(req,res){
 			res.render('editImg',{data:data});
 		}
 	})
+
+	// 创建数据
+	// userModel.create(user, function(err, data) {
+	// 	// console.log(err);
+	// 	// console.log(data);
+	// 	if (!err && data){
+
+	// 		// 传递一次性的消息
+	// 		req.flash('users',data);
+	// 		// 注册成功，跳转首页
+	// 		res.redirect('/');
+	// 		// res.send('ok');
+	// 	} else {
+	// 		// 跳转回注册页面
+	// 		res.redirect('back');
+	// 	}
+	// })
 }
 // 修改头像
 index.updateImg = function(req, res) {
