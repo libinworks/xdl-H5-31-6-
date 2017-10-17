@@ -1,0 +1,55 @@
+<% include layouts/header %>
+
+<style>
+	.main{
+		clear:both;
+		width:1100px;
+		margin:0 auto;
+		margin-top:60px;
+		margin-bottom:100px;
+	}
+	input[type=file]{
+		display:inline-block;
+	}
+	/* 错误信息样式 */
+	.error{
+		color:red;
+	}
+
+	/* 正确信息样式 */
+	.success{
+		color:green;
+	}
+
+	.help-block{
+		display:none;
+	}
+</style>
+
+<div class="main">
+	 <% if (fileError.length) { %>
+			    <div class="alert alert-danger">
+	      		<p>
+	      			图片类型不符合...
+	      			<span class="close" data-dismiss="alert">&times;</span>
+	      		</p>
+	      	</div>
+      <% } %>
+	<form id="reg" action="/updateImg" method="post" class="form-horizontal"  enctype="multipart/form-data">
+		<!-- 隐藏传递用户的_id -->
+		<input type="hidden" name="_id" value="<%= data._id %>">
+		<!-- 隐藏传递用户的userID -->
+		<input type="hidden" name="userID" value="<%= data.userID._id %>">
+		<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">当前头像</label>
+			<div class="col-sm-6">
+				<img src="<%= data.userID.userImg?'/uploads/'+data.userID.userImg : '/uploads/zpf_loginimg.png' %>" alt="" style="width:200px; height:200px; border-radius:50%"><br><br>
+      			<input type="file" name="userpic">
+			</div>
+			<span id="username_span" class="help-block"></span>
+		</div>
+		<input class="btn btn-primary col-sm-7 col-md-offset-2" type="submit" value="修改头像" id="btnUpdate">
+	</form>
+</div>
+
+<% include layouts/footer %>
