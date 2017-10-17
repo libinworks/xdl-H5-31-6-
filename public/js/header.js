@@ -1,8 +1,14 @@
 // 导航切换
 $(function(){
-	$('.nav>ul>li').on('click',function(){
-		$(this).addClass('active').siblings().removeClass('active');
-	})
+
+	var tabIndex =  location.href.indexOf('tab');
+	if (tabIndex==-1) {
+		tab = 'index';
+	} else {
+		var newUrl = location.href.substring(tabIndex);
+		var tab = newUrl.split('&')[0].substring(newUrl.split('&')[0].indexOf('=')+1);
+	}
+	$('[data-tab='+tab+']').addClass('active');
 })
 
 //登录
@@ -343,4 +349,15 @@ $(function(){
 		})
 	})
 })
+
+
+// // 判断注册成功 返回登录页面
+// $(function(){
+// 	alert(2);
+// 	if (regOK.length){
+// 		alert(1);
+// 		// $('#login-wrap').css({display:'block'});
+// 	}
+// })
+
 

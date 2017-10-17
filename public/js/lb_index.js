@@ -35,11 +35,11 @@ $(function(){
 		$('#circle>li').eq(i).addClass('circleActive').siblings().removeClass('circleActive');
 	}
 	// 箭头显示与隐藏
-	$('#bannerImg>li').mouseover(function(){
-		$('#bannerImg>li>div').css({'opacity':1});
+	$('#banner').mouseover(function(){
+		$('#left,#right').css({'opacity':1});
 		clearInterval(timer);
 	}).mouseout(function(){
-		$('#bannerImg>li>div').css({'opacity':0})
+		$('#left,#right').css({'opacity':0})
 		banner();
 	})
 	// 圆点
@@ -91,14 +91,11 @@ $(function(){
 		for(var i = 0;i < ranks.length;i++){
 			var data = ranks[i];
             $('#rank>li').eq(i).css(data);
-            $('#rank>li').eq(i).stop().animate(data,1000);
+            $('#rank>li').eq(i).stop().animate(data,600);
 		}
 	}
 	// 右箭头
 	$('#rankRight').click(function () {
-		// $('#rank>li').css('transition','all 0.1s linear');
-		// $('#rank>li[left=-40px]').css('z-index','1');
-		// $('#rank>li[left=640px]').css('z-index','2');
         var first = ranks.shift();
         ranks.push(first);
         rank();
@@ -106,11 +103,6 @@ $(function(){
     })
     // 左箭头
     function prev(){
-    	// $('#rank>li').eq(0).attr('z-index','2');
-    	// $('#rank>li').eq(2).attr('z-index','1');
-        // $('#rank>li').css('transition','all 0.1s linear');
-  		// $('#rank>li[left=-40px]').attr('z-index','2');
-		// $('#rank>li[left=640px]').css('z-index','1');
         var last = ranks.pop();
         ranks.unshift(last);
         rank();
@@ -145,7 +137,7 @@ $(function(){
 			{'-webkit-transform': 'translateZ(-80px)','transform': 'translateZ(-80px)','-webkit-filter':'brightness(0.6)','filter':'brightness(0.6)','left':'640px','z-index':+c},
 			{'-webkit-transform': 'translateZ(-80px)','transform': 'translateZ(-80px)','-webkit-filter':'brightness(0.6)','filter':'brightness(0.6)','left':'-40px','z-index':+d}
 		]
-		rank();
+		// rank();
     })
     // 返回顶部
     $('#returnTop').click(function () {
@@ -175,14 +167,14 @@ $(function(){
     	goTop();
     }
     function goTop(){
-    	var start = $('#concrete .plate').eq(0).position().top-document.documentElement.scrollTop;
+    	var start = $('#concrete .plate').eq(0).position().top-$(window).scrollTop();
     	if(start <= 0){
     		$('#floor').css('opacity','1');
     	}else{
     		$('#floor').css('opacity','0');
     	}
     	for(var i=0;i < $('.plate').length;i++){
-    		var backtop = $('.plate').eq(i).position().top-document.documentElement.scrollTop;
+    		var backtop = $('.plate').eq(i).position().top-$(window).scrollTop();
     		if(backtop <= 0){
     			$('#floor>li>div').eq(i).addClass('floorCircle1');
     			$('#floor>li>div').eq(i).parent().css('background-color','#BAE0F6').siblings().css('background-color','transparent');
