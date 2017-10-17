@@ -119,5 +119,6 @@ indexgrkj.album = function(req,res){
 // 		console.log(req.file)
 // 	})
 // }
+
 // 向外导出
 module.exports = indexgrkj;

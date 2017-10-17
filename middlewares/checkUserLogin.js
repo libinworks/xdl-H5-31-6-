@@ -4,12 +4,10 @@ module.exports = function(req, res, next) {
 	if (!req.session.user) {
 		// 跳转登录页
 		res.redirect('/');
-		// req.flash('users',null);
 
 		// 终止
 		return;
 	}
- 
 	// 移交权限
 	next();
 }
