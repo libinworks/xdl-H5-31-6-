@@ -93,7 +93,10 @@
 					<div class="activity">
 						<ul>
 							<li><a href="#"  class="dsiplay-1">主页</a></li>
-							<li><a href="#">相册</a></li>
+
+							<li><a href="javascript:;">相册</a></li>
+							<!-- /grkj/album/?tab=index -->
+
 							<li><a href="#">我参与的活动</a></li>
 						</ul>
 					</div>
@@ -269,17 +272,30 @@
 								</div>
 								<!--创建时间结束-->
 								<!--相册名称开始-->
-								<div class="imgName">相册名称</div>
+								<div class="imgName">相册名称</div><br><br>
 								<!--相册名称结束-->
 								<!--创建新相册开始-->
-								<div class="newxiagnce">
+								<!-- <div class="newxiagnce">
 									<a href="#">创建新相册</a>
-								</div>
+								</div> -->
+								<% if (fileError.length) { %>
+									<h3 style="color:red;margin-top:10px"><%= fileError.toString() %></h3>	
+								<%} %>
+								<form style="margin-top:20px" action="/grkj/album" method="post" enctype="multipart/form-data">
+									请选择图片：<br><br><input type="file" name="userpic"><br><br>
+												<input type="submit" value="上传">
+								</form>
 								<!--创建新相册结束-->
 							</div>
 							<!--相片创建的时间结束-->
-							<div class="xiangpianqu">
-								<p>抱歉！暂无照片</p>
+							<div class="xiangpianqu" style="margin-top:160px">
+								<!-- <p>抱歉！暂无照片</p> -->
+								<% files.forEach(function(item){%>
+									<img src="<%= useId+'/'+item %>" alt="">
+								<%}) %>
+								
+								
+
 							</div>
 						</div>
 					</div>

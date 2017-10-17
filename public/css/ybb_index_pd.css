@@ -277,6 +277,15 @@ color: #3E3E3E;
 	font-size: 24px;
 color: #000000;
 }
+.xiangpianqu>img{
+	width:147.5px;
+	margin-bottom:10px;
+	margin-right:10px;
+	float:left;
+}
+.xiangpianqu>img:nth-of-type(4n){
+	margin-right:0;
+}
 /*遮罩层开始*/
 .zhezc{
 	width: 100%;
