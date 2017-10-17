@@ -8,7 +8,6 @@ module.exports = function(req, res, next) {
 		// 终止
 		return;
 	}
-
 	// 移交权限
 	next();
 }

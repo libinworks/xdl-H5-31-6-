@@ -15,6 +15,8 @@ mongoose.connect(dbUrl, {
 		console.log('数据库连接失败了...');
 		// 终止程序
 		return;
+	}else{
+		console.log('数据库连接成功了...');
 	}
 })
 

@@ -33,9 +33,9 @@ app.use(session({
 	// 加密字符串
 	secret: 'suibianxieshenmedouxing',
 	// 当session没有变化时，是否进行初始化
-	saveUninitialized: false,
+	saveUninitialized: true,
 	// 是否进行重新的存储
-	resave: false,
+	resave: true,
 	// rolling 滚动
 	rolling: true,
 	// 存储的有效期和生效的路径
@@ -54,7 +54,9 @@ app.use(function(req, res, next) {
 	
 	// 记录用户登录信息
 	res.locals.user = req.session.user;
-	
+	// res.locals.files = req.session.files;
+	// console.log(req.session.files,'哈哈1');
+	res.locals.fileError = req.flash('fileError');
 	// 记录用户注册成功
 	res.locals.users = req.flash('users').length?req.flash('users'):null;
 	// next() 移交权限
