@@ -23,9 +23,19 @@ router.get('/pd',checkUserLogin,indexgrkj.pd);
 router.get('/rv',indexgrkj.rv);
 
 router.get('/sy',indexgrkj.sy);
-
+//定义添加好友的路由
+router.get('/tj',function(req,res,next){
+	// console.log(req.session.user);
+	if(req.session.user){
+		next();
+	}else{
+		// 跳转首页
+		res.redirect('/');
+	}
+},indexgrkj.tj);
+// 定义交好友的路由
+router.get('/add',indexgrkj.add);
 //相册
 router.post('/album', checkUserLogin,indexgrkj.album);
-
 
 module.exports = router;

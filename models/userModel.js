@@ -76,6 +76,11 @@ var userSchema = new mongoose.Schema({
 	// 我的贴吧
 	mytiebaID: {
 		type: 'ObjectId'
+	},
+	// 我的好友
+	addusers : {
+		type:Array,
+		default:[]
 	}
 
 });

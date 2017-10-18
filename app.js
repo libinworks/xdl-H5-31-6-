@@ -60,9 +60,10 @@ app.use(function(req, res, next) {
 	// 记录用户注册成功
 	res.locals.users = req.flash('users').length?req.flash('users'):null;
 
+	// 挂载好友信息
+	res.locals.datas = req.session.datas;
 
 	res.locals.fileError = req.flash('fileError');
-
 	// next() 移交权限
 	next()
 });
