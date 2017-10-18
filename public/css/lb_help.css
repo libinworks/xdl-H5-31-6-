@@ -1,0 +1,385 @@
+a{
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+}
+a img{
+	-webkit-filter:brightness(1);
+	filter:brightness(1);
+	transition:filter 0.2s linear;
+}
+a:hover img{
+	-webkit-filter:brightness(1.1);
+	filter:brightness(1.1);
+}
+.clear{
+	clear:both;
+}
+#main{
+	width:1100px;
+	margin:20px auto 0 auto;
+}
+#main>p{
+	font-size:24px;
+	color:#383838;
+	line-height:33px;
+}
+#main>img{
+	width:100%;
+	margin-top:20px;
+}
+#question,#others,#opinion{
+	margin-top:70px;
+	clear:both;
+	width:100%;
+	height:100px;
+	position:relative;
+}
+/*#question{
+	height:480px;
+}*/
+#question:after,#others:after,#opinion:after{
+	position:absolute;
+	content:"";
+	height:5px;
+	width:100%;
+	background:#979797;
+	top:22.5px;
+	left:0;
+}
+#question>h3,#others>h3,#opinion>h3{
+	height:50px;
+	line-height:50px;
+	font-size:36px;
+	text-align:center;
+	width:180px;
+	background:#fff;
+	margin:0 auto;
+	position:relative;
+	color:#383838;
+	z-index:1;
+}
+#questionClass{
+	margin-top:30px;
+	position:relative;
+}
+#questionLeft{
+	background:#2c323b;
+	width:160px;
+}
+#questionLeft>li{
+	padding-left:10px;
+	position:relative;
+	height:38px;
+	line-height:38px;
+	color:#fff;
+	font-size:20px;
+	cursor:pointer;
+}
+#questionLeft>li>em{
+	position:absolute;
+	width:0;
+	height:0;
+	border-width:19px 22px;
+	border-style:solid;
+	border-color:transparent;
+	border-left-color:#158fe1;
+	top:0;
+	right:-44px;
+	display:none;
+}
+.questionLeftBg{
+	background:#158fe1;
+}
+#questionLeft>.questionLeftBg>em{
+	display:block;
+}
+.questionLeft{
+	position:absolute;
+	right:0;
+	top:0;
+	width:874px;
+	border:1px solid #979797;
+	padding:10px;
+	padding-bottom:70px;
+	display:none;
+}
+.specificQues{
+	position:absolute;
+	right:0;
+	top:0;
+	width:874px;
+	border:1px solid #979797;
+	padding:10px 10px 20px;
+	display:none;
+}
+.specificQues>a{
+	font-size:28px;
+	line-height:40px;
+	color:#383838;
+	display:block;
+	margin-bottom:20px;
+}
+.specificQues>p{
+	font-size:20px;
+	line-height:28px;
+	color:#383838;
+	margin-bottom:10px;
+}
+.specificQues>p:nth-of-type(2){
+	text-indent:2rem;
+}
+.specificQues>table tr:first-of-type{
+	margin-bottom:10px;
+	background:#2c323b;
+}
+.specificQues>table tr>td{
+	font-size:18px;
+	color:#383838;
+	line-height:22px;
+	border:1px solid #979797;
+}
+.specificQues>table tr:first-of-type>td{
+	color:#fff;
+}
+.specificQues>table tr>td:nth-of-type(1){
+	width:160px;
+	vertical-align:middle;
+}
+.specificQues>table tr>td:nth-of-type(2){
+	width:180px;
+	vertical-align:middle;
+}
+.specificQues>table tr>td:nth-of-type(3){
+	width:530px;
+}
+.specificQues>table tr>td>span{
+	color:red;
+}
+.questionLeftShow{
+	display:block;
+}
+.questionLeft>li>a{
+	margin-right:10px;
+	color:#3e3e3e;
+	font-size:24px;
+	line-height:40px;
+}
+#page{
+	bottom:10px;
+	right:267px;
+	position:absolute;
+	height:28px;
+	width:360px;
+}
+#page>a,#page>span{
+	padding:0 10px;
+	margin-right:5px;
+	height:26px;
+	line-height:26px;
+	display:block;
+	float:left;
+	font-size:18px;
+	color:#3e3e3e;
+	cursor:pointer;
+	border:1px solid #979797;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+#page>.pageBg{
+	color:#fff;
+	background:#158fe1;
+	border-color:#158fe1;
+}
+#others>ul{
+	height:130px;
+	width:100%;
+	margin-top:50px;
+}
+#others>ul>li{
+	float:left;
+	width:346.66px;
+	height:86px;
+	position:relative;
+	padding:22px 0 22px 20px;
+}
+#others>ul>li>a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+#others>ul>li+li:before{
+	content:"";
+	width:1px;
+	height:130px;
+	background:#d8d8d8;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#others>ul>li img{
+	float:left;
+	margin-right:30px;
+}
+#others>ul>li span{
+	font-size:20px;
+	color:#3e3e3e;
+	line-height:44px;
+}
+#put{
+	height:600px;
+	width:700px;
+	background:#e1e1e1;
+	border:2px solid #158fe1;
+	box-shadow:5px 5px 20px 0 rgba(0,0,0,0.5);
+	position:fixed;
+	left:50%;
+	margin-left:-350px;
+	top:0;
+	z-index:999;
+}
+.put{
+	display:none;
+}
+#putTop{
+	height:60px;
+	line-height:60px;
+	background:#158fe1;
+	padding:0 20px 0 40px;
+}
+#putTop>div{
+	background:#fff;
+	height:50px;
+	width:50px;
+	display:inline-block;
+	margin-right:20px;
+	margin-top:4px;
+	float:left;
+}
+#others #putTop>span{
+	font-size:20px;
+	color:#fff;
+
+}
+#putTop>#off{
+	float:right;
+	margin-top:6px;
+	cursor:pointer;
+}
+#opinion>p{
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	color:#000;
+	font-size:18px;
+	border:1px solid #979797;
+	margin-top:30px;
+	box-shadow:0 0 4px 0 #979797 inset;
+}
+#opinion{
+	height:596px;
+}
+#dialogue{
+	height:300px;
+	width:100%;
+	background:#fff;
+	position:relative;
+}
+#dialogue>img{
+	position:absolute;
+	width:303px;
+	height:87px;
+	top:50%;
+	left:50%;
+	margin-top:-43.5px;
+	margin-left:-151.5px;
+}
+#imgs{
+	height:50px;
+	padding-left:40px;
+	line-height:60px;
+}
+#say{
+	height:120px;
+	width:658px;
+	outline:none;
+	background:#fff;
+	resize:none;
+	padding:10px 20px;
+}
+#send{
+	height:40px;
+	line-height:50px;
+	padding-right:40px;
+	text-align:right;
+}
+#send>a{
+	width:103px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	margin-left:30px;
+	font-size:20px;
+	display:inline-block;
+}
+#end{
+	color:#767676;
+}
+#sendTo{
+	background:#158fe1;
+	color:#fff;
+	border-radius:8px;
+}
+#imgs>span{
+	display:inline-block;
+	width:25px;
+	height:24px;
+	background:#fff;
+	margin-right:15px;
+}
+#opinion>form>input:first-of-type{
+	outline:none;
+	border:1px solid #979797;
+	box-shadow:0 0 4px 0 #979797 inset;
+	height:45px;
+	line-height:45px;
+	font-size:18px;
+	padding-left:10px;
+	margin:20px 0;
+	width:1100px;
+}
+#opinion>form>textarea{
+	outline:none;
+	border:1px solid #979797;
+	padding:10px;
+	width:1100px;
+	height:290px;
+	font-size:18px;
+	color:#000;
+	line-height:25px;
+	margin-bottom:20px;
+	resize:none;
+}
+#opinion>form>input:nth-of-type(2),#opinion>form>input:nth-of-type(3){
+	height:33px;
+	padding:0 20px;
+	font-size:18px;
+	line-height:33px;
+	border-radius:4px;
+	cursor:pointer;
+	border-style:none;
+	margin-bottom:46px;
+}
+#opinion>form>input:nth-of-type(2){
+	background:#158fe1;
+	color:#fff;
+	border:1px solid #158fe1;
+	margin:0 100px 0 424px;
+}
+#opinion>form>input:nth-of-type(3){
+	color:#000;
+	border:1px solid #979797;
+	background:#fff;
+}
