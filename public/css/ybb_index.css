@@ -1,0 +1,525 @@
+首页样式*/
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+	font-family: PingFangSC-Regular;
+}
+a:hover{
+	text-decoration: none;
+}
+p{
+	margin:0;
+}
+
+.bodys{
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+}
+.body{
+	width: 1100px;
+	height: 1170px;
+	margin:0 auto;
+}
+/*当前的位置开始*/
+.position{
+	font-size: 24px;
+	color:#383838;
+	margin-bottom: 30px;
+}
+.position span{
+	margin-left: 30px;
+}
+/*当前的位置结束*/
+/*详细资料区域开始*/
+.information{
+	width: 1100px;
+	height:136px;
+	clear:both;
+	background: #fff;
+}
+/*头像区域开始*/
+.HeadPortrait{
+	width: 144px;
+	height: 136px;
+	float: left;
+}
+.HeadPortrait img{
+	width: 100%;
+
+}
+/*头像区域结束*/
+/*详细介绍开始*/
+.PersonalCenter{
+	width: 815px;
+	height: 136px;
+	margin-left: 20px;
+	float: left;
+}
+.PersonalCenter>p{
+	font-size: 26px;
+	color:#3e3e3e;
+	margin-top: 10px;
+}
+.PersonalCenter-div{
+	font-size: 20px;
+	color:#666;
+	margin-top: 10px;
+}
+.PersonalCenter-div>span{
+	margin-right: 20px;
+}
+.PersonalCenter-div-xunzhang{
+	height: 30px;
+	font-size: 22px;
+	color:#666;
+	margin-top: 10px;
+}
+.PersonalCenter-div-xunzhang>p{
+	display: inline-block;
+	width: 36%;
+	margin:0;
+}
+/*详细介绍结束*/
+/*修改资料开始*/
+.modify{
+	width: 121px;
+	height: 100%;
+	float: left;
+}
+.modify span{
+	display: inline-block;
+	width: 121px;
+	height: 38px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 38px;
+	background: #158FE1;
+	border-radius: 5px;
+	margin-top: 40%;
+}
+.modify span a{
+	color:#fff;
+}
+/*修改资料结束*/
+/*详细资料区域结束
+
+/*内容区域开始*/
+.body-container{
+	width: 1100px;
+	min-height: 929px;
+	margin-top: 50px;
+	clear:left;
+}
+/*内容左边区域开始*/
+.content-left{
+	width: 186px;
+	height: 390.5px;
+	background: #2C323B;
+	float: left;
+}
+.content-left ul{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+.content-left ul li{
+	padding:0;
+	width: 100%;
+	height: 55px;
+	font-size: 24px;
+	text-align: center;
+	margin: 0;
+	line-height: 55px;
+}
+.content-left li a{
+	display: block;
+	color:#fff;
+	/*line-height: 40px;*/
+}
+/*内容左边区域结束*/
+/*内容中间区域开始*/
+.content-center{
+	width: 616px;
+	min-height: 929px;
+	float: left;
+	margin-left: 22px;
+	background: #fff;
+	position: relative;
+}
+/*导航栏区域开始*/
+.content-center-nav{
+	width: 100%;
+	height: 33px;
+}
+.content-center-nav ul{
+	list-style: none;
+	height: 33px;
+	margin:0;
+	padding:0;
+}
+.content-center-nav ul li{
+	float: left;
+	font-size: 24px;
+	margin-right:30px;
+}
+.content-center-nav ul .last-li{
+	margin:0;
+}
+.content-center-nav ul li a{
+	color: #3E3E3E;
+}
+.personal{
+	background: #158FE1;
+}
+/*导航栏趋于结束*/
+
+
+/*用户名结束*/
+/*内容中间区域结束*/
+
+/*内容区域右边开始*/
+.content-right{
+	width: 248px;
+	height:684px;
+	float:right;
+	/*margin-left: 23px;*/
+}
+.xingqi{
+	width: 248px;
+	height: 81px;
+	clear: left;
+}
+.xingqi-left{
+	width: 89px;
+	height: 81px;
+	opacity: 0.5;
+	background: #158FE1;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+}
+.xiangqi{
+	display: block;
+	font-size: 25px;
+	color: #3E3E3E;
+	margin-top: 13px;
+}
+.riqi{
+	display: block;
+	font-size: 16px;
+	color: #3E3E3E;
+	margin-top: 10px;
+}
+.qiandao{
+	width: 157px;
+	height: 81px;
+	background: #158FE1;
+	float: left;
+	line-height: 81px;
+}
+.qiandao1{
+	font-size: 36px;
+color: #FFFFFF;
+margin-left: 17px;
+}
+.qiandaotian{
+	font-size: 20px;
+	margin-left: 15px;
+	color:#fff;
+}
+.fangke{
+	width: 246px;
+	height: 583px;
+	background: #F0F0F0;
+	margin-top: 20px;
+}
+.fagnke{
+	width: 100%;
+	height: 30px;
+}
+.fagnke>span{
+	font-size: 22px;
+color: #3E3E3E;
+margin-left: 15px;
+margin-top: 3px;
+}
+/*访客img开始*/
+.fangke-img{
+	height: 400px;
+	width: 215px;
+	margin:0 auto;
+	margin-top: 12px;
+}
+.fangke-img ul{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+.fangke-img ul li{
+	width: 97px;
+	height: 123px;
+	float: left;
+	text-align: center;
+}
+.fangke-li{
+	margin-right: 20px;	
+	font-size: 16px;
+}
+.fangke-img ul li a{
+color: #3E3E3E;
+}
+.fangke-img ul li img{
+	width: 97px;
+	height: 97px;
+}
+/*访客img开始*/
+/*左右箭头开始*/
+.left-jian{
+	width: 215px;
+	height: 15px;
+	margin:0 auto;
+	clear:left;
+}
+.left-jian div{
+	width: 7.5px;
+	height: 15.5px;
+	float: left;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+.left-jian div img{
+	width: 100%;
+	height: 100%;
+}
+.xian2{
+	width: 215px;
+	height: 6px;
+	background: #D8D8D8;
+	margin:0 auto;
+	margin-top: 6px;
+}
+.liulan{
+	width: 215px;
+	height: 65px;
+	margin:0 auto;
+	margin-top: 10px;
+	clear: both;
+}
+.liulan-left{
+	width: 100px;
+	height: 100%;
+	float: left;
+	font-size: 20px;
+color: #3E3E3E;
+}
+.liulan-left span{
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+.liulan-right{
+	float: right;
+	width: 100px;
+		font-size: 20px;
+color: #3E3E3E;
+}
+.liulan-right span{
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+/*左右箭头结束*/
+/*内容区域右边结束*/
+/*内容区域结束*/
+
+/*修改密码开始*/
+.idv{
+	width: 100%;
+	height: 200px;
+	background: red;
+}
+.Line{
+	width: 616px;
+	height: 1px;
+	background: #D8D8D8;
+	margin-top: 92px;
+}
+.password{
+	width: 358px;
+	height: 200px;
+	margin-left: 159px;
+	overflow: hidden;
+}
+.password-1{
+	width: 358px;
+	height: 29px;
+	margin-top: 20px;
+}
+.password-1>span{
+	display: inline-block;
+	width: 88px;
+	height: 25px;
+	line-height: 25px;
+	color: #000000;
+	/*font-size: 18px;*/
+}
+.password-1>input{
+	width: 242px;
+	height: 25px;
+	margin-left: 20px;
+	outline: none;
+	border:none;
+	border: 1px solid #979797;
+}
+/*修改密码结束*/
+/*修改头像开始*/
+.ModifyAvatar{
+	width: 616px;
+	height: auto;
+	overflow: hidden;
+}
+.Avatar{
+	font-size: 24px;
+	color: #3E3E3E;
+	margin-top: 30px;
+}
+.Line1{
+	width: 616px;
+	height: 1px;
+	background: #D8D8D8;
+	margin-top: 5px;
+}
+.PhotoWall{
+	width: 616px;
+	height: 146px;
+	margin-top: 20px;
+	clear: both;
+}
+.HeadPortrait1{
+	width: 146px;
+	height: 146px;
+	float: left;
+}
+.HeadPortrait1 img{
+	width: 100%;
+	height: 100%;
+}
+.walls{
+	width: 430px;
+	height: 145px;
+	padding:10px;
+	border: 1px solid #979797;
+	float: right;
+}
+.walls ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.walls ul li{
+	width: 60px;
+	height: 60px;
+	margin-right: 9px;
+	float: left;
+}
+.walls ul li a{
+	display: block;
+}
+.walls ul li img{
+	width: 100%;
+	height: 100%;
+}
+.topli{
+	margin-top: 10px;
+}
+.walls ul .leftli{
+	margin:0;
+}
+/*上传照片开始*/
+.uplodse{
+	width: 616px;
+	height: 28px;
+	margin-top: 10px;
+	clear: both;
+}
+.uplodse-left{
+	width: 503px;
+	height: 28px;
+	font-size: 20px;
+	color: #FF5A6E;
+	float: left;
+}
+.uplodse-right{
+	width: 80px;
+	height: 26px;
+	background: #158FE1;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 26px;
+	float: right;
+}
+.uplodse-right a{
+	color:#fff;
+}
+/*上传照片结束*/
+/*确认提交开始*/
+.submits{
+	width: 616px;
+	height: 26px;
+	margin-top: 50px;
+}
+.submits div{
+	width: 124px;
+	height: 26px;
+	background: #158FE1;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+	font-size: 16px;
+	margin:0 auto;
+	text-align: center;
+}
+.submits div a{
+	color:#fff;
+	display: block;
+	height: 26px;
+	line-height: 26px;
+}
+/*确认提交结束*/
+/*修改头像结束*/
+/*实名认证开始*/
+.Authentication{
+	width: 616px;
+	height: auto;
+	overflow: hidden;
+}
+.userY{
+	width: 616px;
+	height: 75px;
+	margin-top: 38px;
+	clear: right;
+}
+.userY span{
+	display: inline-block;
+	width: 100px;
+	height: 33px;
+	font-size: 22px;
+	color: #3E3E3E;
+	line-height: 33px;
+}
+.userY div{
+	width: 492px;
+	height: 75px;
+	font-size: 18px;
+	color: #393939;
+	float: right;
+	text-indent:2em;
+}
+/*实名认证结束*/
