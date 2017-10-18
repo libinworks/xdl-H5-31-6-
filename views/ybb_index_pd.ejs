@@ -3,6 +3,8 @@
 <% include layouts/header %>
 <link rel="stylesheet" href="http://at.alicdn.com/t/font_409751_89mdlane4tdcmcxr.css">
 <link rel="stylesheet" href="/css/ybb_index_pd.css">
+<link rel="stylesheet" href="/css/ybb_tb.css">
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<!--身体-->
 	<div class="bodys">
 		<div class="body">
@@ -38,7 +40,8 @@
 				<!--介绍结束-->
 				<!--编辑资料开始-->
 				<div class="modify">
-					<span><a href="#">修改资料</a></span>
+					<span style="margin-top:10px;"><a href="/editPersonal?_id=<%= user._id %>">修改密码</a></span>
+					<span style="margin-top:20px;"><a href="/editImg?_id=<%= user._id %>">修改头像</a></span>
 				</div>
 				<!--编辑资料结束-->
 			</div>
@@ -52,7 +55,7 @@
 						<li><a href="/grkj/rv/?tab=index">与我相关</a></li>
 						
 						<li><a href="/grkj/mbf/?tab=index">我的好友</a></li>
-						<li><a href="/grkj/sy/?tab=index">我的贴吧</a></li>
+						<li><a href="/topic/doCreate">我的贴吧</a></li>
 						<li><a href="/grkj/mp/?tab=index">我的积分</a></li>
 						<li><a href="/grkj/ma/?tab=index">我的勋章</a></li>
 						<li><a href="/grkj/sc/?tab=index">积分商城</a></li>
@@ -92,7 +95,10 @@
 					<div class="activity">
 						<ul>
 							<li><a href="#"  class="dsiplay-1">主页</a></li>
-							<li><a href="#">相册</a></li>
+
+							<li><a href="javascript:;">相册</a></li>
+							<!-- /grkj/album/?tab=index -->
+
 							<li><a href="#">我参与的活动</a></li>
 						</ul>
 					</div>
@@ -268,17 +274,30 @@
 								</div>
 								<!--创建时间结束-->
 								<!--相册名称开始-->
-								<div class="imgName">相册名称</div>
+								<div class="imgName">相册名称</div><br><br>
 								<!--相册名称结束-->
 								<!--创建新相册开始-->
-								<div class="newxiagnce">
+								<!-- <div class="newxiagnce">
 									<a href="#">创建新相册</a>
-								</div>
+								</div> -->
+								<% if (fileError.length) { %>
+									<h3 style="color:red;margin-top:10px"><%= fileError.toString() %></h3>	
+								<%} %>
+								<form style="margin-top:20px" action="/grkj/album" method="post" enctype="multipart/form-data">
+									请选择图片：<br><br><input type="file" name="userpic"><br><br>
+												<input type="submit" value="上传">
+								</form>
 								<!--创建新相册结束-->
 							</div>
 							<!--相片创建的时间结束-->
-							<div class="xiangpianqu">
-								<p>抱歉！暂无照片</p>
+							<div class="xiangpianqu" style="margin-top:160px">
+								<!-- <p>抱歉！暂无照片</p> -->
+								<% files.forEach(function(item){%>
+									<img src="<%= useId+'/'+item %>" alt="">
+								<%}) %>
+								
+								
+
 							</div>
 						</div>
 					</div>
@@ -424,5 +443,7 @@
 			<!--内容区域结束-->
 		</div>
 	</div>
-<script src="/js/ybb_index_pd.js"></script>
+
 <% include layouts/footer %>
+<script src="/js/ybb_fb.js"></script>
+<script src="/js/ybb_index_pd.js"></script>

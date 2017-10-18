@@ -1,13 +1,7 @@
-首页 -->
+<!-- 首页 -->
 <!--头部-->
 <% include layouts/header %>
-<script type="text/javascript" src="/js/ybb_index.js"></script>
-<!-- 引入百度的富文本编辑器 -->
-
-    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
-	<script type="text/javascript" src="/js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="/css/ybb_index.js"></script>
 <link rel="stylesheet" href="/css/ybb_tb.css">
 	<!--身体-->
 	<div class="bodys">
@@ -44,7 +38,8 @@
 				<!--介绍结束-->
 				<!--编辑资料开始-->
 				<div class="modify">
-					<span><a href="#">修改资料</a></span>
+					<span style="margin-top:10px;"><a href="/editPersonal?_id=<%= user._id %>">修改密码</a></span>
+					<span style="margin-top:20px;"><a href="/editImg?_id=<%= user._id %>">修改头像</a></span>
 				</div>
 				<!--编辑资料结束-->
 			</div>
@@ -58,7 +53,7 @@
 						<li><a href="/grkj/rv/?tab=index">与我相关</a></li>
 						<li><a href="#">特别关心</a></li>
 						<li><a href="/grkj/mbf/?tab=index">我的好友</a></li>
-						<li class="personal"><a href="/grkj/sy/?tab=index">我的贴吧</a></li>
+						<li  class="personal"><a href="/topic/doCreate">我的贴吧</a></li>
 						<li><a href="/grkj/mp/?tab=index">我的积分</a></li>
 						<li><a href="/grkj/ma/?tab=index">我的勋章</a></li>
 						<li><a href="/grkj/sc/?tab=index">积分商城</a></li>
@@ -68,14 +63,14 @@
 
 				<!--内容中间区域开始-->
 				<div class="content-center">
-				<form id="docre" method="get" action="/topic/doCreate">
-						<div class="chd_1">
-							<textarea class="textarea" name="a" style="width:610px;height:230px; resize:none;;"></textarea>
-						</div><br>
-						<div class="chd_2">
-							<button type="submit" class="mm" style="margin-right:20px">发表</button>
-						</div>
-				</form>
+					<form id="docre" method="get" action="/topic/doCreate">
+							<div class="chd_1">
+								<textarea class="textarea" name="a" style="width:610px;height:230px; resize:none;;"></textarea>
+							</div><br>
+							<div class="chd_2">
+								<button type="submit" class="mm" style="margin-right:20px">发表</button>
+							</div>
+					</form>
 					<% data.forEach(function(item){ %> 
 					<div class="chd_3">
 						<div class="head_portrait"  >
@@ -113,6 +108,8 @@
 						</div>
 					</div> -->
 				</div>
+
+				
 				<!--内容中间区域结束-->
 
 				<!--内容区域右边部分开始-->
@@ -186,4 +183,4 @@
 		</div>
 	</div>
 <% include layouts/footer %>
- <script src="/js/ybb_fb.js"></script>
+<script src="/js/ybb_fb.js"></script>

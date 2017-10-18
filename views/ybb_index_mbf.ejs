@@ -24,7 +24,11 @@
 					<div class="PersonalCenter-div">
 						<span>活跃度：9999</span>
 						<span>积分：12006</span>
-						<span>好友：552</span>
+						<%if(datas==null){%>
+							<span>好友：0</span>
+						<%}else{%>
+							<span>好友:<%=datas.addusers.length%></span>
+						<%}%>
 						<span>年龄：52</span>
 						<span>来自：<span>山西</span>,<span>太原</span></span>
 					</div>
@@ -38,7 +42,8 @@
 				<!--介绍结束-->
 				<!--编辑资料开始-->
 				<div class="modify">
-					<span><a href="#">修改资料</a></span>
+					<span style="margin-top:10px;"><a href="/editPersonal?_id=<%= user._id %>">修改密码</a></span>
+					<span style="margin-top:20px;"><a href="/editImg?_id=<%= user._id %>">修改头像</a></span>
 				</div>
 				<!--编辑资料结束-->
 			</div>
@@ -52,7 +57,7 @@
 						<li><a href="/grkj/rv/?tab=index">与我相关</a></li>
 						
 						<li  class="personal"><a href="#">我的好友</a></li>
-						<li><a href="/grkj/sy/?tab=index">我的贴吧</a></li>
+						<li><a href="/topic/doCreate">我的贴吧</a></li>
 						<li><a href="/grkj/mp/?tab=index">我的积分</a></li>
 						<li><a href="/grkj/ma/?tab=index">我的勋章</a></li>
 						<li><a href="/grkj/sc/?tab=index">积分商城</a></li>
@@ -71,12 +76,14 @@
 					<!--选项卡结束-->
 					<!--内容区域开始-->
 					<div class="Friends xianshi">
-						<!--添加好友开始-->
-						<div class="AddTo">
-							<p>抱歉!您暂未添加任何好友!</p>
-							<button><a href="#">立即添加</a></button>
-						</div>
-						<!--添加好友结束-->
+							<!--添加好友开始-->
+							<div class="AddTo">
+								<p>抱歉!您暂未添加任何好友!</p>
+								<button><a href="/grkj/tj">立即添加</a></button>
+							</div>
+							<!--添加好友结束-->
+							
+						
 					</div>
 					<!--内容区域结束-->
 					<!--内容区域开始-->
