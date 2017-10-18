@@ -13,7 +13,7 @@ var userSchema = new mongoose.Schema({
 	// 用户头像
 	userImg: {
 		type: String,
-		default: '/imgs/zpf_loginimg.png'
+		default: 'zpf_loginimg.png'
 	},
 	//来自哪里
 	address: {
