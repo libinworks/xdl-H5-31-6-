@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 
 // 定义数据库连接地址
-var dbUrl = 'mongodb://baisui:baisui@192.168.31.125:27017/baisui';
+var dbUrl = 'mongodb://baisui:baisui@localhost:27017/baisui';
 // 建立连接
 mongoose.connect(dbUrl, {
 	useMongoClient: true

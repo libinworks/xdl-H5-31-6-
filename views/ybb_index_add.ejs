@@ -77,32 +77,19 @@
 					<div class="Friends xianshi">
 							<!--添加好友开始-->
 							<div class="AddTo">
-								<p>抱歉!您暂未添加任何好友!</p>
 								<button><a href="/grkj/tj">立即添加</a></button>
 							</div>
 							<!--添加好友结束-->
-							
-						
-					</div>
-					<!--内容区域结束-->
-					<!--内容区域开始-->
-					<div class="Friends">
-						<!--添加好友开始-->
-						<div class="AddTo">
-							<p>抱歉!您暂未添加任何特别关心!</p>
-							<button><a href="#">立即添加</a></button>
-						</div>
-						<!--添加好友结束-->
-						<!--好友开始-->
-						<div class="Shadowresults">
+							<%haoyou.forEach(function(item){%>
+
 							<!--具体内容开始-->
 							<div class="specific">
 								<div class="Headportrait">
-									<a href="#"><img src="/imgs/tx.png"></a>
+									<a href="#"><img src="<%=item.userImg%>"></a>
 								</div>
 								<div class="Textarea">
 									<p class="p1">
-										<span class="nickname">一个帅老头</span>
+										<span class="nickname"><%=item.username%></span>
 										<span class="Grade">等级：&nbsp26</span>		
 									</p>
 									<div class="medal">
@@ -114,43 +101,21 @@
 												<li><img src="/imgs/xun3.png"></li>
 											</ul>
 										</div>
-										<span>亲密度：80</span>
+										<span>活跃度：<%=item.activity%></span>
 									</div>
-									<p class="p2"><span>简介：</span>我是一个性格开朗，喜爱运动的帅老头。</p>
-								</div>
+									<span><a href="/grkj/add?=<%=item._id%>">添加好友</a></span>
+		
 							</div>
 							<!--具体内容结束-->
-							<!--具体内容开始-->
-							<div class="specific">
-								<div class="Headportrait">
-									<a href="#"><img src="/imgs/tx1.png"></a>
-								</div>
-								<div class="Textarea">
-									<p class="p1">
-										<span class="nickname">一个帅老头</span>
-										<span class="Grade">等级：&nbsp26</span>		
-									</p>
-									<div class="medal">
-										<div class="medal-1">
-											<span>勋章：</span>
-											<ul>
-												<li><img src="/imgs/xun1.png"></li>
-												<li><img src="/imgs/xun2.png"></li>
-												<li><img src="/imgs/xun3.png"></li>
-											</ul>
-										</div>
-										<span>亲密度：80</span>
-									</div>
-									<p class="p2"><span>简介：</span>我是一个性格开朗，喜爱运动的帅老头。</p>
-								</div>
-							</div>
-							<!--具体内容结束-->
-						</div>
-						<!--好友结束-->
-					</div>
+							<%})%>
 					<!--内容区域结束-->
+					</div>
+				</div>
+				</div>
+				</div>
 				</div>
 				<!--内容部分中间区域jieshu-->
+
 				<!--内容区域右边部分开始-->
 				<div class="content-right">
 					<div class="xingqi">
@@ -217,6 +182,7 @@
 					</div>
 				</div>
 				<!--内容区域右边部分结束-->
+
 			</div>
 			<!--内容区域结束-->
 		</div>
