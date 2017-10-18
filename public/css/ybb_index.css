@@ -109,7 +109,10 @@ p{
 /*内容区域开始*/
 .body-container{
 	width: 1100px;
+
 	min-height: 929px;
+
+	
 	margin-top: 50px;
 	clear:left;
 }

@@ -15,7 +15,11 @@ var indexgrkj = require('./routes/indexgrkj');
 var indexa = require('./routes/indexa');
 var news = require('./routes/news');
 var huodong = require('./routes/huodong');
+
  var topic = require('./routes/topic');
+
+
+
 var app = express();
 
 // view engine setup
@@ -60,13 +64,31 @@ app.use(function(req, res, next) {
 	// 记录用户注册成功
 	res.locals.users = req.flash('users').length?req.flash('users'):null;
 
+
 	// 挂载好友信息
 	res.locals.datas = req.session.datas;
+
+
+
+	// 挂载好友信息
+	res.locals.datas = req.session.datas;
+
 
 	res.locals.fileError = req.flash('fileError');
 	// next() 移交权限
 	next()
 });
+
+
+
+app.use('/', index);
+app.use('/study',xuexi);
+app.use('/postBar',tieba);
+app.use('/grkj',indexgrkj);
+app.use('/healthy', indexa);
+app.use('/news',news);
+app.use('/huodong',huodong);
+
 
 app.use('/', index);
 app.use('/study',xuexi);

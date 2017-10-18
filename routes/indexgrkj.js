@@ -22,7 +22,11 @@ router.get('/pd',checkUserLogin,indexgrkj.pd);
 
 router.get('/rv',indexgrkj.rv);
 
+
 // router.get('/sy',indexgrkj.sy);
+
+
+
 //定义添加好友的路由
 router.get('/tj',function(req,res,next){
 	// console.log(req.session.user);
