@@ -1,3 +1,21 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>error</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/error.css">
+	<script src="/js/jquery.min.js"></script>
+</head>
+<body>
+ 	<h1 id="err">4 0 4</h1>
+ 	<h2 id="lb_look">查看错误信息</h2>
+ 	<div id="error">
+ 		<span>X</span>
+ 		<p><%= error.stack %></p>
+ 	</div>
+	<canvas id="canv" width="1366" height="215"></canvas>
+</body>
+<script src="/js/error.js"></script>
+</html>
+

@@ -14,5 +14,12 @@ $(function(){
 		}
 	});
 })
-
-
+$(function(){
+	var content = false;
+	var c = $('.chd_3').val().trim();
+	if(c == ''{
+		content = true;
+	}else{
+		content = false;
+	})
+})

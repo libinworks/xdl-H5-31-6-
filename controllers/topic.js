@@ -17,7 +17,7 @@ topic.create = function(req, res) {
 		// console.log(err, data)
 		// 响应页面
 		res.render('ybb_index', {data: data});
-	})
+	}) 
 }
 
 // 处理话题提交数据
@@ -25,7 +25,6 @@ topic.doCreate = function(req, res) {
 	// 获取数据
 	console.log(req.session);
 	console.log(req.query);
-	if(req.query.a.length){
 	var topicData = {
 		content: req.query.a,
 		// content: req.body.content,
@@ -71,5 +70,4 @@ topic.doCreate = function(req, res) {
 			}
 		})
 	}
-}
 module.exports = topic;

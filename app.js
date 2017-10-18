@@ -15,8 +15,10 @@ var indexgrkj = require('./routes/indexgrkj');
 var indexa = require('./routes/indexa');
 var news = require('./routes/news');
 var huodong = require('./routes/huodong');
-var topic = require('./routes/topic');
-// var Message = require('./routes/Message');
+
+ var topic = require('./routes/topic');
+
+
 
 var app = express();
 
@@ -35,9 +37,9 @@ app.use(session({
 	// 加密字符串
 	secret: 'suibianxieshenmedouxing',
 	// 当session没有变化时，是否进行初始化
-	saveUninitialized: false,
+	saveUninitialized: true,
 	// 是否进行重新的存储
-	resave: false,
+	resave: true,
 	// rolling 滚动
 	rolling: true,
 	// 存储的有效期和生效的路径
@@ -56,12 +58,37 @@ app.use(function(req, res, next) {
 	
 	// 记录用户登录信息
 	res.locals.user = req.session.user;
-	
+	// res.locals.files = req.session.files;
+	// console.log(req.session.files,'哈哈1');
+	res.locals.fileError = req.flash('fileError');
 	// 记录用户注册成功
 	res.locals.users = req.flash('users').length?req.flash('users'):null;
+
+
+	// 挂载好友信息
+	res.locals.datas = req.session.datas;
+
+
+
+	// 挂载好友信息
+	res.locals.datas = req.session.datas;
+
+
+	res.locals.fileError = req.flash('fileError');
 	// next() 移交权限
 	next()
 });
+
+
+
+app.use('/', index);
+app.use('/study',xuexi);
+app.use('/postBar',tieba);
+app.use('/grkj',indexgrkj);
+app.use('/healthy', indexa);
+app.use('/news',news);
+app.use('/huodong',huodong);
+
 
 app.use('/', index);
 app.use('/study',xuexi);
@@ -71,8 +98,6 @@ app.use('/healthy', indexa);
 app.use('/news',news);
 app.use('/huodong',huodong);
 app.use('/topic',topic);
-// app.use('/Message',Message);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

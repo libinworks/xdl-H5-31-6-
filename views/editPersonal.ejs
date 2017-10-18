@@ -1,0 +1,113 @@
+<% include layouts/header %>
+
+<style>
+	.main{
+		clear:both;
+		width:1100px;
+		margin:0 auto;
+		margin-top:60px;
+		margin-bottom:100px;
+	}
+	input[type=file]{
+		display:inline-block;
+	}
+	/* 错误信息样式 */
+	.error{
+		color:red;
+	}
+
+	/* 正确信息样式 */
+	.success{
+		color:green;
+	}
+
+	.help-block{
+		display:none;
+	}
+</style>
+
+<div class="main">
+	<form id="reg" action="/update" method="post" class="form-horizontal">
+		<!-- 隐藏传递用户的_id -->
+		<input type="hidden" name="_id" value="<%= data._id %>">
+		<!-- 隐藏传递用户的userID -->
+		<input type="hidden" name="userID" value="<%= data.userID._id %>">
+		<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">用户名:</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" id="username" name="username" value="<%= data.username %>" disabled>
+			</div>
+			<span id="username_span" class="help-block"></span>
+		</div>
+		<div class="form-group">
+		<label for="userpwd" class="col-sm-3 control-label">密码:</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control" id="userpwd" name="userpwd">
+			</div>
+			<span id="userpwd_span" class="help-block"></span>
+		</div>
+		<div class="form-group">
+		<label for="userpwd2" class="col-sm-3 control-label">确认密码:</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control" id="userpwd2" name="userpwd2">
+			</div>
+			<span id="userpwd2_span" class="help-block"></span>
+		</div>		
+		<input class="btn btn-primary col-sm-7 col-md-offset-2" type="submit" value="修改密码" id="btnUpdate">
+	</form>
+</div>
+
+<% include layouts/footer %>
+
+<script>
+	$(function(){
+		var ispwd = false;
+		var ispwd2 = false;
+		// 修改资料验证
+		$('#btnUpdate').click(function(){
+			var userpwd = $('#userpwd').val().trim();
+			var userpwd2 = $('#userpwd2').val().trim();
+			if(userpwd == ''){
+				$('#userpwd_span').addClass('error').removeClass('success').html('密码不允许为空').css({display:'block'});
+				ispwd = false;
+				return;
+			}else{
+				$('#userpwd_span').css({display:'none'});
+				ispwd = true;
+			}
+			if(userpwd2 == ''){
+				$('#userpwd2_span').addClass('error').removeClass('success').html('确认密码不允许为空').css({display:'block'});
+				ispwd2 = false;
+				return;
+			}else if(userpwd != userpwd2){
+				$('#userpwd2_span').addClass('error').removeClass('success').html('两次密码不一致！').css({display:'block'});
+				ispwd2 = false;
+				return;
+			}else{
+				$('#userpwd2_span').css({display:'none'});
+				ispwd2 = true;
+			}
+
+			$.ajax({
+				url:'/update',
+				data:{
+					userpwd: userpwd
+				},
+				type: 'post',
+				success: function(data){
+
+				},
+				error: function(error){
+					console.log(error);
+				}
+			})
+			
+		})
+
+		$('#reg').submit(function(){
+			if(!(ispwd && ispwd2)){
+				return false;
+			}
+		})
+	})
+</script>

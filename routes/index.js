@@ -42,4 +42,17 @@ router.post('/reg',index.reg);
 // 退出登录
 router.get('/lognUp',index.lognUp);
 
+// 修改密码
+router.get('/editPersonal',index.editPersonal);
+
+// 更新密码页面
+router.post('/update',index.update);
+
+// 修改头像
+router.get('/editImg',index.editImg);
+
+// 修改头像
+router.post('/updateImg',index.updateImg);
+
+
 module.exports = router;
