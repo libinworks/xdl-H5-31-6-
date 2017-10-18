@@ -1,0 +1,177 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font-family: PinFangSC-Regular;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.container{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 20px;
+	margin-bottom:50px;
+}
+.container>p{
+	font-size: 24px;
+}
+/*新闻区域*/
+.journalis>h3{
+	font-size: 64px;
+	text-align: center;
+	font-weight: 300;
+	margin-top: 35px;
+	margin-bottom:15px;
+}
+.journalis .p2{
+	font-size: 18px;
+	text-align: center;
+}
+.journalis>img{
+	display: block;
+	width: 689px;
+	height: 389px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.introduce{
+	width: 1002px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.introduce>p{
+	text-indent: 1em;
+	font-size: 20px;
+	margin-bottom: 30px;
+	line-height: 28px;
+}
+
+.review{
+	width: 1100px;
+	margin: 0 auto;
+}
+.line{
+	width: 1100px;
+	height: 5px;
+	clear: both;
+	background: #F0F0F0;
+	position: relative;
+	margin-top: 50px;
+}
+.comment{
+	width: 160px;
+	height: 50px;
+	font-size: 36px;
+	text-align: center;
+	position: absolute;
+	margin: -31px;
+	left: 585px;
+	background: #fff;
+}
+.signin{
+	width: 1000px;
+	height: 122px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.signin>input{
+	width: 837px;
+	height: 122px;
+	border: 3px solid #979797;
+	float: left;
+	border-right: 0px;
+}
+.signin>button{
+	width: 160px;
+	height: 122px;
+	background: #158FE1;
+	float: left;
+	border: 0;
+	font-size: 24px;
+	color: #fff;
+}
+.share{
+	margin-top: 20px;
+	float: right;
+	width: 200px;
+	margin-bottom: 50px;
+}
+.share>.a1{
+	display: inline-block;
+	width: 88px;
+	height: 43px;
+	background: #158FE1;
+	text-align: center;
+	color: #fff;
+	line-height: 43px;
+	border-radius: 8px;
+	font-size: 24px;
+	float: left;
+}
+.share>.a2{
+	display: inline-block;
+	width: 88px;
+	height: 43px;
+	background: #FF5A6E;
+	text-align: center;
+	color: #fff;
+	line-height: 43px;
+	border-radius: 8px;
+	font-size: 24px;
+	float: right;
+}
+.reply{
+	width: 1092px;
+	margin: 0 auto;
+}
+.reply>div{
+	margin-top: 20px;
+	width: 100%;
+	height: 207px;
+	border-bottom: 2px solid #F0F0F0;
+}
+.left{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+.right{
+	float: left;
+	width: 930px;
+	margin-left: 20px;
+}
+.right>p{
+	font-size: 24px;
+	color: #4A4A4A;
+}
+.right>span{
+	color: #4A4A4A;
+	font-size: 20px;
+	display: block;
+	margin-top: 15px;	
+}
+.reply1{
+	float: right;
+	margin-top: 0.8%;
+	margin-bottom: 1%;
+}
+.reply1>a{
+	display: inline-block;
+	width: 88px;
+	height: 43px;
+	background: #158FE1;
+	text-align: center;
+	color: #fff;
+	line-height: 43px;
+	border-radius: 8px;
+	font-size: 24px;
+	
+}

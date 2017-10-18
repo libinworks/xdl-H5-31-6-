@@ -1,0 +1,114 @@
+ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+/*内容部分中间区域开始*/
+.center{
+	width: 626px;
+	height: 400px;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+/*选项卡开始*/
+.option{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.option ul li{
+	float: left;
+	margin-right: 30px;
+	font-size: 24px;
+}
+.option ul li a{
+color: #393939;	
+}
+.option ul li .haoyou{
+	color: #158FE1;
+}
+/*选项卡美容区域开始*/
+.Friends{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	display: none;
+}
+.xianshi{
+	display: block;
+}
+/*选项卡内容区域结束*/
+.AddTo{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.AddTo p{
+	text-align: center;
+	margin-top: 70px;
+	font-size: 24px;
+color: #000000;
+}
+.AddTo button{
+	padding:1px 30px;
+	outline: none;
+	border:none;
+	border-radius: 10px;
+	background: #158FE1;
+	margin-top: 20px;
+}
+.AddTo button a{
+	color:#fff;
+}
+/*好友开始*/
+.cian{
+	width: 100%;
+	height: 2px;
+	float: left;
+	background: #F0F0F0;
+	margin-top: 20px;
+}
+/*选项卡结束*/
+/*内容部分中间区域结束*/
+/*支出记录开始*/
+.zhichu{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	display: none;
+}
+.table{
+	width: 620px;
+	height: 100px;
+	border: 1px solid #979797;
+	clear: both;
+	margin-top: 20px;
+}
+.table-top{
+	width: 100%;
+	height: 36px;
+	border-bottom: 1px solid #979797;
+	font-size: 18px;
+	line-height: 36px;
+}
+.table-left,.table-center{
+	width: 247px;
+	height: 62px;
+	border-right: 1px solid #979797;
+	float: left;
+	line-height: 62px;
+	font-size: 20px;
+color: #000000;
+text-align: center;
+}
+.table-ritht{
+	width: 124px;
+	height: 62px;
+	line-height: 62px;
+	font-size: 20px;
+color: #000000;
+text-align: center;
+float: left;
+}
+/*支出记录jiehsu*/
