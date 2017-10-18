@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>柏岁网</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<!-- 头部css -->
+	<link rel="stylesheet" href="/css/header.css">
+	<!-- 底部css -->
+	<link rel="stylesheet" href="/css/footer.css">
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<!-- 头部JS -->
+	<script src="/js/header.js"></script>
+
+	<link rel="stylesheet" href="/css/ybb_index.css">
+</head>
+<body>
+	<!-- 定义头部开始 -->
+	<!-- 头部登录 帮助 开始 -->
+	<div class="header-login">
+		<div class="Welcome">
+			<span>欢迎来到柏岁网！</span>
+		</div>
+		<% if(user){%>
+			<div class="login-help-Success">
+				<a href="#" class="login-success">
+					<img src="<%= user.img %>" alt="">
+					<span><%= user.uname %></span>
+				</a>
+				<a class="help" href="/help">帮助</a>
+				
+				<div class="login-help-signUp">
+					<!-- <div class="sanjiao"></div> -->
+					<a href="/grkj/pd/?tab=index"><img src="/imgs/zpf_grkj.png" alt=""><span>个人空间</span></a>
+					<a href="" id="dropOutLogin"><img src="/imgs/zpf_tcdl.png" alt=""><span>退出登录</span></a>
+				</div>
+			</div>
+			
+		<% }else{%>
+			<div class="login-help">
+				<a id="login" class="login" >登录</a>
+				<a class="help" href="/help">帮助</a>
+			</div>
+		<%}%>
+		
+	</div>
+	<!-- 头部登录 帮助 结束 -->
+
+	<!-- 头部logo 搜索框 开始 -->
+	<div class="header-logo-search">
+		<div class="logo">
+			<img src="/imgs/zpf_logo.png" alt="">		
+		</div>
+		<div class="search">
+			<div class="search-input">
+				<input type="text">
+			</div>
+			<div class="search-btn">
+				<a href="">搜索</a>
+			</div>
+		</div>
+	</div>
+	<!-- 头部logo 搜索框 结束 -->
+
+	<!-- 头部导航开始 -->
+	<div class="nav">
+		<ul>
+			<li data-tab="index"><a href="/?tab=index">首页</a></li>
+			<li data-tab="sq_news"><a href="/news/?tab=sq_news">新闻</a></li>
+			<li data-tab="study"><a href="/study/xuexi_6/?tab=study">学习</a></li>
+			<li data-tab="sq_huodong"><a href="/huodong/?tab=sq_huodong">活动</a></li>
+			<li data-tab="healthy"><a href="/healthy/?tab=healthy">健康</a></li>
+			<li data-tab="postBar"><a href="/postBar/?tab=postBar">贴吧</a></li>
+			<li data-tab="baisuibang"><a href="/baisuibang/?tab=baisuibang">柏岁榜</a></li>
+		</ul>
+	</div>
+
+	<!-- 头部导航结束 -->	
+	<!-- 定义头部结束 -->
+	
+	<!-- 登录框 -->
+	<div style="display:<%= users?'block':'none'%>" id="login-wrap">
+		<!-- 登录框 -->
+		<div id="login-pop">
+			<!-- <button id="close">x</button> -->
+			<!-- 快捷登录 -->
+			<div class='quick-Login'>
+				<div>
+					<img src="/imgs/zpf_shouji.png" alt="">
+					<a href="#">短信快捷登录</a>
+				</div>
+			</div>
+			<!-- 用户名密码登录 -->
+			<form id="formName" action="/login" method="post">
+				<span class="loginPrompt"></span>
+				<input type="text" id="uname" name="uname" placeholder="手机/用户名">
+				<input type="password" id="pwd" name="pwd" placeholder="密码">
+				<div class="autoLogin">
+					<input type="checkbox" id="chkBox" name="chkBox">
+					<!-- <span>下次自动登录</span> -->
+					<label for="chkBox">下次自动登录</label>
+				</div>
+				<div class="loginProblem">
+					<a href="#">登录遇到问题</a>
+				</div>
+				<button id="btn_login">登录</button>
+				<a href="#" class="signUp" id="signUp">立即注册</a>
+			</form>
+		</div>
+	</div>
+
+	<!-- 注册框 -->
+	<div id="reg-wrap">
+		<!-- 注册框 -->
+		<div id="reg-pop">
+			<!-- 快捷登录 -->
+			<div class='quick-Login'>
+				<div>
+					<img src="/imgs/zpf_shouji.png" alt="">
+					<a href="#">短信快捷注册</a>
+				</div>
+			</div>
+			<!-- 用户名密码登录 -->
+			<form id="formName_reg" action="/reg" method="post">
+				<span class="loginPrompt-reg"></span>
+				<div>
+					<label for="">用户名</label>
+					<input type="text" id="reg_uname" name="reg_uname" maxlength="10">
+				</div>
+				<div>
+					<label for="">手机号</label>
+					<input type="text" id="reg_tel" name="reg_tel" oninput="if(value.length>11)value=value.slice(0,11)" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+				</div>
+				<div id="yzm-wrap">
+					<label for="">验证码</label>
+					<input type="text" id="reg_yzm" name="reg_yzm" maxlength="4">
+					<span id="code" class="code_pic" title="看不清，换一张"></span>
+				</div>
+				<div>
+					<label for="">密码</label>
+					<input type="password" id="reg_pwd" name="reg_pwd" maxlength="18">
+				</div>
+				<span class="userAgreement-wrap">
+					<input type="checkbox" id="chkBox_reg" name="chkBox_reg">
+					<!-- <span class="userAgreement">阅读并接受
+						<a href="">《柏岁用户协议》</a>及
+						<a href="">《柏岁隐私权保护声明》</a>
+					</span> -->
+					<label for="chkBox_reg" class="userAgreement">阅读并接受
+						<a href="">《柏岁用户协议》</a>及
+						<a href="">《柏岁隐私权保护声明》</a>
+					</label>
+				</span>
+				<button id="btn_reg">注册</button>
+			</form>
+		</div>
+	</div>
+	
+		
+
+		
+	

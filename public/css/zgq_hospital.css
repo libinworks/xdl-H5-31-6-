@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font-family: PinFangSC-Regular;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.container{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 20px;
+	margin-bottom:50px;
+}
+.container>p{
+	font-size: 24px;
+}
+/*体验中心*/
+.journalis{
+	width: 1030px;
+	margin: 0 auto;
+	margin-top: 75px;
+}
+.journalis>h3{
+	margin-bottom: 30px;
+	font-size: 32px;
+	text-align: center;
+	font-weight: 300;
+
+}
+.journalis .p2{
+	font-size: 18px;
+	text-align: center;
+}
+.journalis .tu1{
+	display: block;
+	width: 1029px;
+	height: 717px;
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+.journalis>p{
+	font-size: 24px;
+	line-height: 33px;
+	text-indent: 2.5em;
+	letter-spacing: 3.2px;
+	color: #090909;
+}
+.journalis .tu2{
+	display: block;
+	width: 848px;
+	height: 463px;
+	margin: 25px auto;
+
+}
+
+/*报名*/
+.signup{
+	width: 400px;
+	height: 240px;
+	margin: 0 auto;
+	margin-top: 46px;
+}
+.signup>a{
+	display: block;
+    width: 245px;
+    height: 94px;
+    background: #158FE1;
+    text-align: center;
+    color: #fff;
+    line-height: 94px;
+    border-radius: 8px;
+    font-size: 36px;
+    margin: 0 auto;
+    letter-spacing: 4.8px;
+    margin-bottom: 20px;
+}
+.signup>p{
+	margin-top: 11px;
+	text-align: center;
+	line-height: 33px;
+	font-size: 20px;
+}
